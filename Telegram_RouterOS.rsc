@@ -1,10 +1,14 @@
-#Created by DKHNV		
-#Gen1 23.12.2025	
+#Created by DKHNV
+#Gen3 12.04.2026
 
 /ip firewall address-list
-add list=TG address=	91.108.4.0/22	comment=Telegram
-add list=TG address=	91.108.8.0/22	comment=Telegram
-add list=TG address=	91.108.56.0/22	comment=Telegram
-add list=TG address=	95.161.64.0/20	comment=Telegram
-add list=TG address=	149.154.160.0/22	comment=Telegram
-add list=TG address=	149.154.164.0/22	comment=Telegram
+
+add list=telegram address=91.108.56.0/22 comment=telegram
+add list=telegram address=91.108.4.0/22 comment=telegram
+add list=telegram address=91.108.8.0/22 comment=telegram
+add list=telegram address=91.108.16.0/22 comment=telegram
+add list=telegram address=91.108.12.0/22 comment=telegram
+add list=telegram address=149.154.160.0/20 comment=telegram
+add list=telegram address=91.105.192.0/23 comment=telegram
+add list=telegram address=91.108.20.0/22 comment=telegram
+add list=telegram address=185.76.151.0/24 comment=telegram
