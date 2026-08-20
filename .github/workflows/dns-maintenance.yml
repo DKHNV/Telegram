@@ -4,11 +4,10 @@ on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: "Check DNS only; do not modify or commit files"
+        description: "Check/discover DNS only; do not modify or commit files"
         required: false
         default: true
         type: boolean
-
   schedule:
     - cron: "17 5 * * *"
       timezone: "Europe/Helsinki"
@@ -43,9 +42,17 @@ jobs:
       - name: Run unit tests
         run: python -m unittest discover -s dns_maintenance/tests -v
 
-      - name: DNS maintenance dry run
+      - name: Discover DNS candidates - dry run
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+        run: python dns_maintenance/discover_dns.py --collection telegram --dry-run
+
+      - name: DNS maintenance - dry run
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
         run: python dns_maintenance/update_dns.py --collection telegram --dry-run
+
+      - name: Discover DNS candidates
+        if: ${{ github.event_name != 'workflow_dispatch' || !inputs.dry_run }}
+        run: python dns_maintenance/discover_dns.py --collection telegram
 
       - name: Maintain DNS lists
         if: ${{ github.event_name != 'workflow_dispatch' || !inputs.dry_run }}
