@@ -83,6 +83,59 @@ def aggregate_attempts(attempts: list[dict[str, Any]]) -> str:
     return "FAILURE"
 
 
+
+
+def compact_failure_attempt(attempt: dict[str, Any]) -> dict[str, Any]:
+    """Return a small, JSON-safe failure record for logs/state."""
+    item: dict[str, Any] = {
+        "ip": attempt.get("ip"),
+        "port": attempt.get("port"),
+        "status": str(attempt.get("status", "ERROR")),
+    }
+    detail = attempt.get("detail")
+    if detail:
+        item["detail"] = str(detail)[:300]
+    return item
+
+
+def build_failure_record(attempts: list[dict[str, Any]], now: datetime) -> dict[str, Any]:
+    """Build a structured description of the latest failed service check."""
+    failures = [
+        compact_failure_attempt(a)
+        for a in attempts
+        if a.get("status") not in {"HTTPS_OK", "TLS_OK"}
+    ]
+    statuses = sorted({str(a.get("status", "ERROR")) for a in failures})
+    if len(statuses) == 1:
+        failure_type = statuses[0]
+    elif statuses:
+        failure_type = "MULTIPLE"
+    else:
+        failure_type = "UNKNOWN"
+    return {
+        "at": iso(now),
+        "type": failure_type,
+        "statuses": statuses,
+        "attempts": failures,
+    }
+
+
+def one_line_detail(value: Any) -> str:
+    return " ".join(str(value).split())[:300]
+
+
+def normalize_service_state_entry(state: dict[str, Any]) -> None:
+    """Migrate service-state fields written by the previous checker version."""
+    previous = state.get("last_failure")
+    if isinstance(previous, str) and previous:
+        state["last_failure"] = {
+            "at": previous,
+            "type": "LEGACY",
+            "statuses": [],
+            "attempts": [],
+        }
+
+
 def new_service_state(host: str, now: datetime) -> dict[str, Any]:
     return {
         "hostname": host,
@@ -127,7 +180,7 @@ def apply_service_result(
         # Do not punish service health for a DNS-layer problem.
         return old, old
 
-    state["last_failure"] = stamp
+    state["last_failure"] = build_failure_record(attempts, now)
     failures = int(state.get("consecutive_failures", 0)) + 1
     state["consecutive_failures"] = failures
 
@@ -260,6 +313,8 @@ def validate_service_config(cfg: dict[str, Any]) -> None:
         raise ValueError("service_check.max_workers must be >= 1")
     if int(cfg.get("max_ipv4_per_host", 3)) < 1:
         raise ValueError("service_check.max_ipv4_per_host must be >= 1")
+    if int(cfg.get("failure_log_limit", 50)) < 0:
+        raise ValueError("service_check.failure_log_limit must be >= 0")
     suspect = int(cfg.get("suspect_after_failures", 3))
     dead = int(cfg.get("dead_after_failures", 7))
     if suspect < 1 or dead < suspect:
@@ -311,6 +366,9 @@ def service_collection(repo_root: Path, collection: dict[str, Any], dry_run: boo
     service_hosts = service_state.setdefault("hosts", {})
     if not isinstance(service_hosts, dict):
         raise ValueError(f"[{name}] invalid service hosts state")
+    for stored in service_hosts.values():
+        if isinstance(stored, dict):
+            normalize_service_state_entry(stored)
 
     now = utc_now()
     for host in active_hosts:
@@ -361,6 +419,43 @@ def service_collection(repo_root: Path, collection: dict[str, Any], dry_run: boo
         f"FAILURE={counts_by_result.get('FAILURE', 0)} SKIPPED={counts_by_result.get('SKIPPED', 0)} | "
         f"alive={len(alive_hosts)} suspect={len(suspect_hosts)} dead={len(dead_hosts)} unknown={len(unknown_hosts)}"
     )
+
+    failure_attempt_counts: dict[str, int] = {}
+    failed_hosts: list[str] = []
+    for host in active_hosts:
+        aggregate, attempts, _selected_ips = results[host]
+        if aggregate != "FAILURE":
+            continue
+        failed_hosts.append(host)
+        for attempt in attempts:
+            status = str(attempt.get("status", "ERROR"))
+            failure_attempt_counts[status] = failure_attempt_counts.get(status, 0) + 1
+
+    if failure_attempt_counts:
+        summary = " ".join(f"{key}={failure_attempt_counts[key]}" for key in sorted(failure_attempt_counts))
+        print(f"[{name}] service failure attempts: {summary}")
+
+    failure_log_limit = int(service_cfg.get("failure_log_limit", 50))
+    for host in failed_hosts[:failure_log_limit]:
+        aggregate, attempts, _selected_ips = results[host]
+        state = service_hosts[host]
+        print(
+            f"[{name}] service failure: host={host} result={aggregate} "
+            f"consecutive_failures={state.get('consecutive_failures', 0)} "
+            f"status={state.get('status', 'unknown')}"
+        )
+        for attempt in attempts:
+            status = str(attempt.get("status", "ERROR"))
+            line = (
+                f"[{name}]   ip={attempt.get('ip')}:{attempt.get('port')} "
+                f"status={status}"
+            )
+            if attempt.get("detail"):
+                line += f" detail={one_line_detail(attempt.get('detail'))}"
+            print(line)
+    if len(failed_hosts) > failure_log_limit:
+        print(f"[{name}] ... and {len(failed_hosts) - failure_log_limit} more failed host(s)")
+
     for transition in transitions[:30]:
         print(f"[{name}] service transition: {transition}")
     if len(transitions) > 30:
