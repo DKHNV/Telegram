@@ -1,6 +1,6 @@
 # Telegram DNS Maintenance Report
 
-> Generated automatically at `2026-08-20T08:01:57Z`. HTTPS/TLS health is observational and does **not** remove entries from the public DNS list.
+> Generated automatically at `2026-08-20T08:13:27Z`. HTTPS/TLS health is observational and does **not** remove entries from the public DNS list.
 
 ## Overview
 
@@ -18,7 +18,7 @@
 
 ## Latest HTTPS/TLS check
 
-State updated: `2026-08-20T08:01:53Z`
+State updated: `2026-08-20T08:13:23Z`
 
 | Result | Count |
 |---|---:|
@@ -49,14 +49,15 @@ State updated: `2026-08-20T08:01:53Z`
 
 | Hostname | State | Consecutive failures | Last error | IPv4 | Stability | Samples | Last check |
 |---|---|---:|---|---|---:|---:|---|
-| `mail.telegram.org` | suspect | 3 | TIMEOUT | 95.161.64.16 | 0.0% | 1 | `2026-08-20T08:01:53Z` |
-| `mx101.telegram.org` | suspect | 3 | TIMEOUT | 95.161.64.16 | 0.0% | 1 | `2026-08-20T08:01:53Z` |
-| `mx110.telegram.org` | suspect | 3 | TLS_CERT_ERROR | 149.154.162.247 | 0.0% | 1 | `2026-08-20T08:01:53Z` |
+| `mail.telegram.org` | suspect | 4 | TIMEOUT | 95.161.64.16 | 0.0% | 2 | `2026-08-20T08:13:23Z` |
+| `mx101.telegram.org` | suspect | 4 | TIMEOUT | 95.161.64.16 | 0.0% | 2 | `2026-08-20T08:13:23Z` |
+| `mx110.telegram.org` | suspect | 4 | TLS_CERT_ERROR | 149.154.162.247 | 0.0% | 2 | `2026-08-20T08:13:23Z` |
 
 ## Discovery
 
-Discovery state updated: `2026-08-20T08:01:53Z`  
-DNS state updated: `2026-08-20T08:01:53Z`
+Discovery state updated: `2026-08-20T08:13:22Z`
+
+DNS state updated: `2026-08-20T08:13:23Z`
 
 New CT-discovered hosts imported in the latest DNS-maintenance run: **0**.
 
@@ -64,9 +65,9 @@ New CT-discovered hosts imported in the latest DNS-maintenance run: **0**.
 
 | Root domain | Caught up | Last poll |
 |---|---|---|
-| `t.me` | yes | `2026-08-20T08:01:53Z` |
-| `telegram.me` | yes | `2026-08-20T08:01:53Z` |
-| `telegram.org` | yes | `2026-08-20T08:01:53Z` |
+| `t.me` | yes | `2026-08-20T08:13:22Z` |
+| `telegram.me` | yes | `2026-08-20T08:13:22Z` |
+| `telegram.org` | yes | `2026-08-20T08:13:22Z` |
 
 ## Notes
 
