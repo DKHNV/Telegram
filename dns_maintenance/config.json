@@ -35,6 +35,22 @@
           "request_timeout_seconds": 30.0,
           "user_agent": "DKHNV-DNS-Maintenance/1.0"
         }
+      },
+      "service_check": {
+        "enabled": true,
+        "state": "dns/telegram/service_state.json",
+        "alive": "dns/telegram/service_alive.txt",
+        "suspect": "dns/telegram/service_suspect.txt",
+        "dead": "dns/telegram/service_dead.txt",
+        "unknown": "dns/telegram/service_unknown.txt",
+        "port": 443,
+        "path": "/",
+        "timeout_seconds": 4.0,
+        "max_workers": 10,
+        "max_ipv4_per_host": 3,
+        "suspect_after_failures": 3,
+        "dead_after_failures": 7,
+        "user_agent": "DKHNV-DNS-Maintenance/1.0"
       }
     }
   ]
