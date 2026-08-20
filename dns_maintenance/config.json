@@ -21,7 +21,21 @@
       "suspect": "dns/telegram/suspect.txt",
       "quarantine": "dns/telegram/quarantine.txt",
       "expired": "dns/telegram/expired.txt",
-      "state": "dns/telegram/state.json"
+      "state": "dns/telegram/state.json",
+      "discovery": {
+        "enabled": true,
+        "state": "dns/telegram/discovery_state.json",
+        "certspotter": {
+          "domains": [
+            "telegram.org",
+            "telegram.me",
+            "t.me"
+          ],
+          "max_pages_per_domain": 5,
+          "request_timeout_seconds": 30.0,
+          "user_agent": "DKHNV-DNS-Maintenance/1.0"
+        }
+      }
     }
   ]
 }
