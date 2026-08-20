@@ -71,6 +71,8 @@ class ReportTests(unittest.TestCase):
         self.assertIn("TIMEOUT", text)
         self.assertIn("New CT-discovered hosts imported in the latest DNS-maintenance run: **1**", text)
         self.assertIn("`new.telegram.org`", text)
+        for line in text.splitlines():
+            self.assertEqual(line, line.rstrip(" \t"), f"trailing whitespace in: {line!r}")
 
 
 if __name__ == "__main__":
