@@ -50,7 +50,10 @@
         "max_ipv4_per_host": 3,
         "suspect_after_failures": 3,
         "dead_after_failures": 7,
-        "user_agent": "DKHNV-DNS-Maintenance/1.0"
+        "user_agent": "DKHNV-DNS-Maintenance/1.0",
+        "history_limit": 14,
+        "failure_log_limit": 50,
+        "report": "dns/telegram/report.md"
       }
     }
   ]

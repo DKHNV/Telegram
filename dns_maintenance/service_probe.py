@@ -19,7 +19,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
-SERVICE_STATE_VERSION = 1
+SERVICE_STATE_VERSION = 2
+DEFAULT_HISTORY_LIMIT = 14
 HTTP_STATUS_RE = re.compile(rb"^HTTP/\d(?:\.\d)?\s+(\d{3})(?:\s|$)")
 
 
@@ -125,7 +126,7 @@ def one_line_detail(value: Any) -> str:
 
 
 def normalize_service_state_entry(state: dict[str, Any]) -> None:
-    """Migrate service-state fields written by the previous checker version."""
+    """Migrate service-state fields written by older checker versions."""
     previous = state.get("last_failure")
     if isinstance(previous, str) and previous:
         state["last_failure"] = {
@@ -134,6 +135,12 @@ def normalize_service_state_entry(state: dict[str, Any]) -> None:
             "statuses": [],
             "attempts": [],
         }
+    if not isinstance(state.get("history"), list):
+        state["history"] = []
+    state.setdefault("stability_score", None)
+    state.setdefault("history_samples", 0)
+    state.setdefault("history_successes", 0)
+    state.setdefault("history_failures", 0)
 
 
 def new_service_state(host: str, now: datetime) -> dict[str, Any]:
@@ -149,7 +156,71 @@ def new_service_state(host: str, now: datetime) -> dict[str, Any]:
         "ever_alive": False,
         "last_ipv4": [],
         "attempts": [],
+        "history": [],
+        "stability_score": None,
+        "history_samples": 0,
+        "history_successes": 0,
+        "history_failures": 0,
     }
+
+
+def history_event(
+    aggregate: str,
+    attempts: list[dict[str, Any]],
+    now: datetime,
+) -> dict[str, Any]:
+    event: dict[str, Any] = {"at": iso(now), "result": aggregate}
+    if aggregate == "ALIVE":
+        successful = next(
+            (a for a in attempts if a.get("status") in {"HTTPS_OK", "TLS_OK"}),
+            None,
+        )
+        if successful:
+            event["type"] = str(successful.get("status"))
+            event["ip"] = successful.get("ip")
+            if successful.get("http_status") is not None:
+                event["http_status"] = successful.get("http_status")
+            if successful.get("tls_version"):
+                event["tls_version"] = successful.get("tls_version")
+    elif aggregate == "FAILURE":
+        failure = build_failure_record(attempts, now)
+        event["type"] = failure.get("type", "UNKNOWN")
+        event["statuses"] = failure.get("statuses", [])
+    else:
+        event["type"] = "DNS_SKIPPED"
+    return event
+
+
+def update_history_metrics(state: dict[str, Any], history_limit: int) -> None:
+    history = state.setdefault("history", [])
+    if not isinstance(history, list):
+        history = []
+        state["history"] = history
+    if history_limit > 0 and len(history) > history_limit:
+        del history[:-history_limit]
+
+    measured = [item for item in history if item.get("result") in {"ALIVE", "FAILURE"}]
+    successes = sum(1 for item in measured if item.get("result") == "ALIVE")
+    failures = sum(1 for item in measured if item.get("result") == "FAILURE")
+    state["history_samples"] = len(measured)
+    state["history_successes"] = successes
+    state["history_failures"] = failures
+    state["stability_score"] = round(successes * 100 / len(measured), 1) if measured else None
+
+
+def append_history(
+    state: dict[str, Any],
+    aggregate: str,
+    attempts: list[dict[str, Any]],
+    now: datetime,
+    history_limit: int,
+) -> None:
+    history = state.setdefault("history", [])
+    if not isinstance(history, list):
+        history = []
+        state["history"] = history
+    history.append(history_event(aggregate, attempts, now))
+    update_history_metrics(state, history_limit)
 
 
 def apply_service_result(
@@ -160,6 +231,7 @@ def apply_service_result(
     now: datetime,
     suspect_after_failures: int,
     dead_after_failures: int,
+    history_limit: int = DEFAULT_HISTORY_LIMIT,
 ) -> tuple[str, str]:
     old = str(state.get("status", "unknown"))
     stamp = iso(now)
@@ -167,6 +239,7 @@ def apply_service_result(
     state["attempts"] = attempts
     state["last_ipv4"] = list(ipv4)
     state["last_result"] = aggregate
+    append_history(state, aggregate, attempts, now, history_limit)
 
     if aggregate == "ALIVE":
         state["status"] = "alive"
@@ -315,6 +388,8 @@ def validate_service_config(cfg: dict[str, Any]) -> None:
         raise ValueError("service_check.max_ipv4_per_host must be >= 1")
     if int(cfg.get("failure_log_limit", 50)) < 0:
         raise ValueError("service_check.failure_log_limit must be >= 0")
+    if int(cfg.get("history_limit", DEFAULT_HISTORY_LIMIT)) < 1:
+        raise ValueError("service_check.history_limit must be >= 1")
     suspect = int(cfg.get("suspect_after_failures", 3))
     dead = int(cfg.get("dead_after_failures", 7))
     if suspect < 1 or dead < suspect:
@@ -361,7 +436,8 @@ def service_collection(repo_root: Path, collection: dict[str, Any], dry_run: boo
     )
     if not isinstance(service_state, dict):
         raise ValueError(f"[{name}] invalid service state")
-    if int(service_state.get("version", SERVICE_STATE_VERSION)) != SERVICE_STATE_VERSION:
+    stored_version = int(service_state.get("version", 1))
+    if stored_version not in {1, SERVICE_STATE_VERSION}:
         raise ValueError(f"[{name}] unsupported service state version")
     service_hosts = service_state.setdefault("hosts", {})
     if not isinstance(service_hosts, dict):
@@ -377,6 +453,7 @@ def service_collection(repo_root: Path, collection: dict[str, Any], dry_run: boo
     max_workers = int(service_cfg.get("max_workers", 10))
     suspect_after = int(service_cfg.get("suspect_after_failures", 3))
     dead_after = int(service_cfg.get("dead_after_failures", 7))
+    history_limit = int(service_cfg.get("history_limit", DEFAULT_HISTORY_LIMIT))
 
     results: dict[str, tuple[str, list[dict[str, Any]], list[str]]] = {}
 
@@ -398,7 +475,7 @@ def service_collection(repo_root: Path, collection: dict[str, Any], dry_run: boo
     for host in active_hosts:
         aggregate, attempts, selected_ips = results[host]
         old, new = apply_service_result(
-            service_hosts[host], aggregate, attempts, selected_ips, now, suspect_after, dead_after
+            service_hosts[host], aggregate, attempts, selected_ips, now, suspect_after, dead_after, history_limit
         )
         if old != new:
             transitions.append(f"{host}: {old} -> {new}")

@@ -8,6 +8,7 @@ from dns_maintenance.service_probe import (
     new_service_state,
     normalize_service_state_entry,
     parse_http_status,
+    update_history_metrics,
 )
 
 
@@ -101,6 +102,38 @@ class ServiceProbeTests(unittest.TestCase):
         apply_service_result(state, "SKIPPED", [], [], NOW, 3, 7)
         self.assertEqual(state["status"], "alive")
         self.assertEqual(state["consecutive_failures"], 2)
+
+    def test_history_is_capped_and_stability_is_calculated(self):
+        state = new_service_state("example.com", NOW)
+        for i in range(16):
+            result = "ALIVE" if i % 2 == 0 else "FAILURE"
+            attempts = ([{"ip": "1.2.3.4", "port": 443, "status": "HTTPS_OK", "http_status": 200}]
+                        if result == "ALIVE" else [{"ip": "1.2.3.4", "port": 443, "status": "TIMEOUT"}])
+            apply_service_result(state, result, attempts, ["1.2.3.4"], NOW, 3, 50, history_limit=14)
+        self.assertEqual(len(state["history"]), 14)
+        self.assertEqual(state["history_samples"], 14)
+        self.assertEqual(state["history_successes"], 7)
+        self.assertEqual(state["history_failures"], 7)
+        self.assertEqual(state["stability_score"], 50.0)
+
+    def test_skipped_history_does_not_reduce_stability(self):
+        state = new_service_state("example.com", NOW)
+        apply_service_result(
+            state, "ALIVE", [{"ip": "1.2.3.4", "port": 443, "status": "TLS_OK"}],
+            ["1.2.3.4"], NOW, 3, 7, history_limit=14
+        )
+        apply_service_result(state, "SKIPPED", [], [], NOW, 3, 7, history_limit=14)
+        self.assertEqual(len(state["history"]), 2)
+        self.assertEqual(state["history_samples"], 1)
+        self.assertEqual(state["stability_score"], 100.0)
+
+    def test_normalize_adds_observability_fields(self):
+        state = {"last_failure": None}
+        normalize_service_state_entry(state)
+        self.assertEqual(state["history"], [])
+        self.assertIsNone(state["stability_score"])
+        self.assertEqual(state["history_samples"], 0)
+
 
 
 if __name__ == "__main__":
