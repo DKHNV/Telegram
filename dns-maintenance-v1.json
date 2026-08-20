@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "defaults": {
+    "dns": {
+      "resolvers": [
+        "1.1.1.1",
+        "8.8.8.8",
+        "9.9.9.9"
+      ],
+      "timeout_seconds": 2.0,
+      "lifetime_seconds": 4.0,
+      "negative_votes_required": 2,
+      "suspect_after_hours": 72,
+      "quarantine_after_hours": 168,
+      "expire_after_hours": 720,
+      "negative_streak_max_gap_hours": 48,
+      "suspect_min_negative_observations": 3,
+      "quarantine_min_negative_observations": 7,
+      "max_workers": 20
+    },
+    "service_check": {
+      "enabled": true,
+      "port": 443,
+      "path": "/",
+      "timeout_seconds": 4.0,
+      "max_workers": 10,
+      "max_ipv4_per_host": 3,
+      "suspect_after_hours": 72,
+      "dead_after_hours": 168,
+      "failure_streak_max_gap_hours": 48,
+      "suspect_min_failure_observations": 3,
+      "dead_min_failure_observations": 7,
+      "history_days": 14,
+      "history_max_entries": 256,
+      "failure_log_limit": 50,
+      "user_agent": "DKHNV-DNS-Maintenance/1.0"
+    }
+  },
+  "collections": [
+    {
+      "name": "telegram",
+      "active_file": "Telegram_DNS",
+      "data_dir": "dns/telegram",
+      "discovery": {
+        "enabled": true,
+        "sources": [
+          {
+            "type": "certspotter",
+            "id": "certspotter",
+            "roots": [
+              "telegram.org",
+              "telegram.me",
+              "t.me"
+            ],
+            "max_pages_per_root": 5,
+            "request_timeout_seconds": 30.0,
+            "user_agent": "DKHNV-DNS-Maintenance/1.0"
+          }
+        ]
+      }
+    }
+  ]
+}
