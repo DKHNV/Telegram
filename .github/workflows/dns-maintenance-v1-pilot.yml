@@ -1,0 +1,18 @@
+name: DNS maintenance v1 pilot
+
+on:
+  workflow_dispatch:
+
+# Pilot is deliberately read-only. The reusable workflow cannot elevate these
+# permissions, and dry_run is hardcoded to true below.
+permissions:
+  contents: read
+
+jobs:
+  maintain:
+    uses: DKHNV/DNS-Maintenance/.github/workflows/reusable-maintenance.yml@main
+    with:
+      config_path: dns-maintenance-v1.json
+      collection: telegram
+      dry_run: true
+      engine_ref: main
