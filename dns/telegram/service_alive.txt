@@ -1,0 +1,15 @@
+api.telegram.org
+cloud.telegram.org
+desktop.telegram.org
+gbot.integrations.telegram.org
+macos.telegram.org
+macupdates.telegram.org
+my.telegram.org
+osx.telegram.org
+t.me
+telegram.me
+telegram.org
+web.telegram.org
+www.t.me
+www.telegram.me
+www.telegram.org
