@@ -1,91 +1,19 @@
-name: DNS maintenance
+name: DNS maintenance legacy (disabled)
 
 on:
   workflow_dispatch:
-    inputs:
-      dry_run:
-        description: "Check/discover DNS and probe services only; do not modify or commit files"
-        required: false
-        default: true
-        type: boolean
-  schedule:
-    - cron: "17 5 * * *"
-      timezone: "Europe/Helsinki"
 
+# The legacy Telegram-local engine is intentionally disabled before the v1
+# migration. Its source files remain in the repository only as a rollback aid.
 permissions:
-  contents: write
-
-concurrency:
-  group: dns-maintenance-${{ github.ref }}
-  cancel-in-progress: false
+  contents: read
 
 jobs:
-  maintain:
+  disabled:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v7
-        with:
-          fetch-depth: 0
-
-      - name: Set up Python
-        uses: actions/setup-python@v7
-        with:
-          python-version: "3.13"
-          cache: pip
-          cache-dependency-path: dns_maintenance/requirements.txt
-
-      - name: Install dependencies
-        run: python -m pip install -r dns_maintenance/requirements.txt
-
-      - name: Run unit tests
-        run: python -m unittest discover -s dns_maintenance/tests -v
-
-      - name: Discover DNS candidates - dry run
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
-        run: python dns_maintenance/discover_dns.py --collection telegram --dry-run
-
-      - name: DNS maintenance - dry run
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
-        run: python dns_maintenance/update_dns.py --collection telegram --dry-run
-
-      - name: Service health - dry run
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
-        run: python dns_maintenance/service_probe.py --collection telegram --dry-run
-
-      - name: Discover DNS candidates
-        if: ${{ github.event_name != 'workflow_dispatch' || !inputs.dry_run }}
-        run: python dns_maintenance/discover_dns.py --collection telegram
-
-      - name: Maintain DNS lists
-        if: ${{ github.event_name != 'workflow_dispatch' || !inputs.dry_run }}
-        run: python dns_maintenance/update_dns.py --collection telegram
-
-      - name: Probe service health
-        if: ${{ github.event_name != 'workflow_dispatch' || !inputs.dry_run }}
-        run: python dns_maintenance/service_probe.py --collection telegram
-
-      - name: Generate maintenance report
-        if: ${{ github.event_name != 'workflow_dispatch' || !inputs.dry_run }}
-        run: python dns_maintenance/report.py --collection telegram
-
-      - name: Validate generated diff
-        if: ${{ github.event_name != 'workflow_dispatch' || !inputs.dry_run }}
-        run: git diff --check
-
-      - name: Commit changes
-        if: ${{ github.event_name != 'workflow_dispatch' || !inputs.dry_run }}
-        shell: bash
+      - name: Legacy engine disabled
         run: |
-          git add -- Telegram_DNS dns/telegram
-
-          if git diff --cached --quiet; then
-            echo "No DNS/service changes to commit."
-            exit 0
-          fi
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore(dns): automatic maintenance $(date -u +'%Y-%m-%d')"
-          git push
+          echo "The legacy Telegram-local DNS maintenance workflow is disabled."
+          echo "Use 'DNS maintenance v1 pilot' for read-only checks."
+          echo "Use 'DNS maintenance v1 migration' only for the controlled v1 write migration."
