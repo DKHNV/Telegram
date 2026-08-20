@@ -8,7 +8,6 @@ on:
         required: false
         default: true
         type: boolean
-
   schedule:
     - cron: "17 5 * * *"
       timezone: "Europe/Helsinki"
@@ -43,10 +42,6 @@ jobs:
       - name: Run unit tests
         run: python -m unittest discover -s dns_maintenance/tests -v
 
-      # =========================================================
-      # DRY RUN
-      # =========================================================
-
       - name: Discover DNS candidates - dry run
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
         run: python dns_maintenance/discover_dns.py --collection telegram --dry-run
@@ -59,10 +54,6 @@ jobs:
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
         run: python dns_maintenance/service_probe.py --collection telegram --dry-run
 
-      # =========================================================
-      # REAL RUN
-      # =========================================================
-
       - name: Discover DNS candidates
         if: ${{ github.event_name != 'workflow_dispatch' || !inputs.dry_run }}
         run: python dns_maintenance/discover_dns.py --collection telegram
@@ -74,6 +65,10 @@ jobs:
       - name: Probe service health
         if: ${{ github.event_name != 'workflow_dispatch' || !inputs.dry_run }}
         run: python dns_maintenance/service_probe.py --collection telegram
+
+      - name: Generate maintenance report
+        if: ${{ github.event_name != 'workflow_dispatch' || !inputs.dry_run }}
+        run: python dns_maintenance/report.py --collection telegram
 
       - name: Validate generated diff
         if: ${{ github.event_name != 'workflow_dispatch' || !inputs.dry_run }}
@@ -92,6 +87,5 @@ jobs:
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
           git commit -m "chore(dns): automatic maintenance $(date -u +'%Y-%m-%d')"
           git push
