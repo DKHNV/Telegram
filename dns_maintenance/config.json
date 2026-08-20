@@ -1,0 +1,27 @@
+{
+  "resolvers": [
+    "1.1.1.1",
+    "8.8.8.8",
+    "9.9.9.9"
+  ],
+  "timeout_seconds": 2.0,
+  "lifetime_seconds": 4.0,
+  "negative_votes_required": 2,
+  "suspect_after_failures": 3,
+  "quarantine_after_failures": 7,
+  "expire_after_days": 30,
+  "max_workers": 20,
+  "collections": [
+    {
+      "name": "telegram",
+      "active": "Telegram_DNS",
+      "manual": "dns/telegram/manual.txt",
+      "discovered": "dns/telegram/discovered.txt",
+      "pending": "dns/telegram/pending.txt",
+      "suspect": "dns/telegram/suspect.txt",
+      "quarantine": "dns/telegram/quarantine.txt",
+      "expired": "dns/telegram/expired.txt",
+      "state": "dns/telegram/state.json"
+    }
+  ]
+}
