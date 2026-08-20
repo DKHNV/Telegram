@@ -1,0 +1,72 @@
+name: DNS maintenance
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Check DNS only; do not modify or commit files"
+        required: false
+        default: true
+        type: boolean
+
+  schedule:
+    - cron: "17 5 * * *"
+      timezone: "Europe/Helsinki"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dns-maintenance-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  maintain:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: dns_maintenance/requirements.txt
+
+      - name: Install dependencies
+        run: python -m pip install -r dns_maintenance/requirements.txt
+
+      - name: Run unit tests
+        run: python -m unittest discover -s dns_maintenance/tests -v
+
+      - name: DNS maintenance dry run
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+        run: python dns_maintenance/update_dns.py --collection telegram --dry-run
+
+      - name: Maintain DNS lists
+        if: ${{ github.event_name != 'workflow_dispatch' || !inputs.dry_run }}
+        run: python dns_maintenance/update_dns.py --collection telegram
+
+      - name: Validate generated diff
+        if: ${{ github.event_name != 'workflow_dispatch' || !inputs.dry_run }}
+        run: git diff --check
+
+      - name: Commit changes
+        if: ${{ github.event_name != 'workflow_dispatch' || !inputs.dry_run }}
+        shell: bash
+        run: |
+          git add -- Telegram_DNS dns/telegram
+
+          if git diff --cached --quiet; then
+            echo "No DNS list changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(dns): automatic maintenance $(date -u +'%Y-%m-%d')"
+          git push
