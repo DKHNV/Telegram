@@ -1,19 +1,32 @@
-name: DNS maintenance legacy (disabled)
+name: DNS maintenance v1
 
 on:
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Run checks only; do not modify or commit managed DNS state"
+        required: false
+        default: true
+        type: boolean
 
-# The legacy Telegram-local engine is intentionally disabled before the v1
-# migration. Its source files remain in the repository only as a rollback aid.
+  schedule:
+    - cron: "17 5,11,17,23 * * *"
+      timezone: "Europe/Helsinki"
+
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: dns-maintenance-telegram-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
-  disabled:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Legacy engine disabled
-        run: |
-          echo "The legacy Telegram-local DNS maintenance workflow is disabled."
-          echo "Use 'DNS maintenance v1 pilot' for read-only checks."
-          echo "Use 'DNS maintenance v1 migration' only for the controlled v1 write migration."
+  maintain:
+    uses: DKHNV/DNS-Maintenance/.github/workflows/reusable-maintenance.yml@c8696805dbdafe8e368b394dc5f21097455352c5
+    with:
+      config_path: dns-maintenance-v1.json
+      collection: telegram
+      dry_run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+      engine_ref: c8696805dbdafe8e368b394dc5f21097455352c5
+    secrets:
+      certspotter_api_key: ${{ secrets.CERTSPOTTER_API_KEY }}
