@@ -4,10 +4,11 @@ on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: "Check/discover DNS only; do not modify or commit files"
+        description: "Check/discover DNS and probe services only; do not modify or commit files"
         required: false
         default: true
         type: boolean
+
   schedule:
     - cron: "17 5 * * *"
       timezone: "Europe/Helsinki"
@@ -42,6 +43,10 @@ jobs:
       - name: Run unit tests
         run: python -m unittest discover -s dns_maintenance/tests -v
 
+      # =========================================================
+      # DRY RUN
+      # =========================================================
+
       - name: Discover DNS candidates - dry run
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
         run: python dns_maintenance/discover_dns.py --collection telegram --dry-run
@@ -50,6 +55,14 @@ jobs:
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
         run: python dns_maintenance/update_dns.py --collection telegram --dry-run
 
+      - name: Service health - dry run
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+        run: python dns_maintenance/service_probe.py --collection telegram --dry-run
+
+      # =========================================================
+      # REAL RUN
+      # =========================================================
+
       - name: Discover DNS candidates
         if: ${{ github.event_name != 'workflow_dispatch' || !inputs.dry_run }}
         run: python dns_maintenance/discover_dns.py --collection telegram
@@ -57,6 +70,10 @@ jobs:
       - name: Maintain DNS lists
         if: ${{ github.event_name != 'workflow_dispatch' || !inputs.dry_run }}
         run: python dns_maintenance/update_dns.py --collection telegram
+
+      - name: Probe service health
+        if: ${{ github.event_name != 'workflow_dispatch' || !inputs.dry_run }}
+        run: python dns_maintenance/service_probe.py --collection telegram
 
       - name: Validate generated diff
         if: ${{ github.event_name != 'workflow_dispatch' || !inputs.dry_run }}
@@ -69,11 +86,12 @@ jobs:
           git add -- Telegram_DNS dns/telegram
 
           if git diff --cached --quiet; then
-            echo "No DNS list changes to commit."
+            echo "No DNS/service changes to commit."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git commit -m "chore(dns): automatic maintenance $(date -u +'%Y-%m-%d')"
           git push
