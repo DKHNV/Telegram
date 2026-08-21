@@ -1,0 +1,149 @@
+name: Telegram repository cleanup
+
+on:
+  workflow_dispatch:
+    inputs:
+      apply_cleanup:
+        description: "Delete legacy engine/files and keep only central DNS-Maintenance setup"
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: telegram-repository-cleanup
+  cancel-in-progress: false
+
+jobs:
+  cleanup:
+    if: ${{ inputs.apply_cleanup }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate current production setup
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          test -f Telegram_DNS
+          test -s Telegram_DNS
+          test -f dns-maintenance-v1.json
+          test -f dns/telegram/state.json
+          test -f .github/workflows/dns-maintenance.yml
+
+          EXPECTED_SHA="d2b7dffa3e79269e6f63ffb243ebf2abbfeae3eb"
+
+          grep -Fq "DKHNV/DNS-Maintenance/.github/workflows/reusable-maintenance.yml@${EXPECTED_SHA}" \
+            .github/workflows/dns-maintenance.yml
+
+          grep -Fq "engine_ref: ${EXPECTED_SHA}" \
+            .github/workflows/dns-maintenance.yml
+
+          echo "Production workflow is pinned to the expected central engine."
+          echo "Telegram_DNS contains $(grep -cve '^[[:space:]]*$' Telegram_DNS) non-empty lines."
+
+      - name: Remove legacy Telegram implementation
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          rm -rf dns_maintenance
+
+          rm -f Telegram-CIDR.txt
+          rm -f Telegram_RouterOS.rsc
+
+          rm -f .github/workflows/dns-maintenance-v1-pilot.yml
+          rm -f .github/workflows/dns-maintenance-v1-migration.yml
+
+          # This workflow is intentionally one-shot and removes itself.
+          rm -f .github/workflows/telegram-repository-cleanup.yml
+
+      - name: Replace README
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          cat > README.md <<'EOF'
+          # Telegram
+
+          Актуальный список DNS-имён, связанных с Telegram.
+
+          Если нужен только готовый список, всё просто:
+
+          **[Telegram_DNS](https://raw.githubusercontent.com/DKHNV/Telegram/refs/heads/main/Telegram_DNS)**
+
+          ## Что здесь происходит
+
+          Репозиторий больше не содержит собственный движок обслуживания DNS. Проверка, discovery и lifecycle выполняются централизованно через [DKHNV/DNS-Maintenance](https://github.com/DKHNV/DNS-Maintenance), а этот репозиторий хранит только конфигурацию Telegram и результат его работы.
+
+          Автоматика:
+
+          - ищет новые DNS-имена Telegram по открытым источникам;
+          - проверяет DNS через несколько независимых резолверов;
+          - публикует только hostname, которые имеют публичный unicast IPv4;
+          - переводит проблемные записи через `pending`, `suspect`, `quarantine` и `expired`;
+          - отдельно наблюдает HTTPS/TLS, не смешивая его состояние с DNS lifecycle.
+
+          ## Структура
+
+          - `Telegram_DNS` — публичный актуальный список DNS-имён;
+          - `dns-maintenance-v1.json` — конфигурация коллекции Telegram;
+          - `dns/telegram/` — состояние lifecycle, discovery, HTTPS/TLS и автоматически сформированный отчёт;
+          - `.github/workflows/dns-maintenance.yml` — production workflow, который запускает центральный движок.
+
+          ## Чего здесь больше нет
+
+          CIDR, IP-списки и RouterOS-скрипты здесь больше не генерируются. Этот репозиторий отвечает только за DNS-слой, а дальнейшая обработка выполняется отдельно.
+
+          Так меньше дублирующей логики и меньше шансов однажды обнаружить три разных «актуальных» списка. Одного источника истины вполне достаточно.
+          EOF
+
+          sed -i 's/^          //' README.md
+
+      - name: Review cleanup
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          echo "Files changed by cleanup:"
+          git status --short
+          echo
+          echo "Diff summary:"
+          git diff --stat
+
+          test -s Telegram_DNS
+          test -f dns-maintenance-v1.json
+          test -f dns/telegram/state.json
+          test -f .github/workflows/dns-maintenance.yml
+
+          test ! -e dns_maintenance
+          test ! -e Telegram-CIDR.txt
+          test ! -e Telegram_RouterOS.rsc
+          test ! -e .github/workflows/dns-maintenance-v1-pilot.yml
+          test ! -e .github/workflows/dns-maintenance-v1-migration.yml
+          test ! -e .github/workflows/telegram-repository-cleanup.yml
+
+      - name: Commit cleanup
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "Nothing to clean."
+            exit 0
+          fi
+
+          git commit -m "chore: remove legacy Telegram DNS engine"
+          git push
