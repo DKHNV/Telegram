@@ -1,32 +1,31 @@
 # Telegram
 
-Актуальный список DNS-имён, связанных с Telegram.
+Репозиторий содержит готовые сетевые списки Telegram и автоматизированно поддерживаемый список DNS-имён.
 
-Если нужен только готовый список, всё просто:
+## Готовые файлы
 
-**[Telegram_DNS](https://raw.githubusercontent.com/DKHNV/Telegram/refs/heads/main/Telegram_DNS)**
+- [Telegram-CIDR.txt](Telegram-CIDR.txt) — IPv4/CIDR-сети Telegram.
+- [Telegram_RouterOS.rsc](Telegram_RouterOS.rsc) — готовый address-list для RouterOS.
+- [Telegram_DNS](Telegram_DNS) — актуальный список DNS-имён Telegram.
 
-## Что здесь происходит
+## DNS maintenance
 
-Репозиторий больше не содержит собственный движок обслуживания DNS. Проверка, discovery и lifecycle выполняются централизованно через [DKHNV/DNS-Maintenance](https://github.com/DKHNV/DNS-Maintenance), а этот репозиторий хранит только конфигурацию Telegram и результат его работы.
+Обслуживание `Telegram_DNS` выполняется централизованно через [DKHNV/DNS-Maintenance](https://github.com/DKHNV/DNS-Maintenance).
 
 Автоматика:
 
 - ищет новые DNS-имена Telegram по открытым источникам;
 - проверяет DNS через несколько независимых резолверов;
-- публикует только hostname, которые имеют публичный unicast IPv4;
-- переводит проблемные записи через `pending`, `suspect`, `quarantine` и `expired`;
-- отдельно наблюдает HTTPS/TLS, не смешивая его состояние с DNS lifecycle.
+- допускает в DNS lifecycle только hostname с публичным unicast IPv4;
+- ведёт состояния `pending`, `suspect`, `quarantine` и `expired`;
+- отдельно наблюдает HTTPS/TLS, не используя его как основание для удаления DNS.
 
-## Структура
+## Структура автоматизации
 
-- `Telegram_DNS` — публичный актуальный список DNS-имён;
-- `dns-maintenance-v1.json` — конфигурация коллекции Telegram;
-- `dns/telegram/` — состояние lifecycle, discovery, HTTPS/TLS и автоматически сформированный отчёт;
-- `.github/workflows/dns-maintenance.yml` — production workflow, который запускает центральный движок.
+- `dns-maintenance-v1.json` — конфигурация Telegram для центрального движка;
+- `dns/telegram/` — lifecycle state, discovery state, HTTPS/TLS state и отчёт;
+- `.github/workflows/dns-maintenance.yml` — единственный production workflow DNS-Maintenance.
 
-## Чего здесь больше нет
+Локального исполняемого DNS-движка в этом репозитории больше нет: код обслуживания находится только в центральном `DNS-Maintenance`.
 
-CIDR, IP-списки и RouterOS-скрипты здесь больше не генерируются. Этот репозиторий отвечает только за DNS-слой, а дальнейшая обработка выполняется отдельно.
-
-Так меньше дублирующей логики и меньше шансов однажды обнаружить три разных «актуальных» списка. Одного источника истины вполне достаточно.
+При этом `Telegram-CIDR.txt` и `Telegram_RouterOS.rsc` являются самостоятельными файлами проекта и не относятся к внутреннему DNS-движку.
