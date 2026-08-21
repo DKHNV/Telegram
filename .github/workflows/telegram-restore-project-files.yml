@@ -1,0 +1,156 @@
+name: Restore Telegram project files
+
+on:
+  workflow_dispatch:
+    inputs:
+      apply_restore:
+        description: "Restore CIDR/RouterOS project files removed by cleanup"
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: telegram-project-files-restore
+  cancel-in-progress: false
+
+jobs:
+  restore:
+    if: ${{ inputs.apply_restore }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate current central DNS setup
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          test -s Telegram_DNS
+          test -f dns-maintenance-v1.json
+          test -f dns/telegram/state.json
+          test -f .github/workflows/dns-maintenance.yml
+
+          EXPECTED_SHA="d2b7dffa3e79269e6f63ffb243ebf2abbfeae3eb"
+
+          grep -Fq "DKHNV/DNS-Maintenance/.github/workflows/reusable-maintenance.yml@${EXPECTED_SHA}" \
+            .github/workflows/dns-maintenance.yml
+          grep -Fq "engine_ref: ${EXPECTED_SHA}" \
+            .github/workflows/dns-maintenance.yml
+
+      - name: Restore Telegram CIDR file
+        shell: bash
+        run: |
+          cat > Telegram-CIDR.txt <<'EOF'
+          #Created by DKHNV
+          #Gen4 19.04.2026
+
+          91.108.56.0/22
+          91.108.4.0/22
+          91.108.8.0/22
+          91.108.16.0/22
+          91.108.12.0/22
+          149.154.160.0/20
+          91.105.192.0/23
+          91.108.20.0/22
+          185.76.151.0/24
+          EOF
+          sed -i 's/^          //' Telegram-CIDR.txt
+
+      - name: Restore Telegram RouterOS file
+        shell: bash
+        run: |
+          cat > Telegram_RouterOS.rsc <<'EOF'
+          #Created by DKHNV
+          #Gen4 19.04.2026
+
+          /ip firewall address-list
+
+          add list=telegram address=91.108.56.0/22 comment=telegram
+          add list=telegram address=91.108.4.0/22 comment=telegram
+          add list=telegram address=91.108.8.0/22 comment=telegram
+          add list=telegram address=91.108.16.0/22 comment=telegram
+          add list=telegram address=91.108.12.0/22 comment=telegram
+          add list=telegram address=149.154.160.0/20 comment=telegram
+          add list=telegram address=91.105.192.0/23 comment=telegram
+          add list=telegram address=91.108.20.0/22 comment=telegram
+          add list=telegram address=185.76.151.0/24 comment=telegram
+          EOF
+          sed -i 's/^          //' Telegram_RouterOS.rsc
+
+      - name: Correct README
+        shell: bash
+        run: |
+          cat > README.md <<'EOF'
+          # Telegram
+
+          Репозиторий содержит готовые сетевые списки Telegram и автоматизированно поддерживаемый список DNS-имён.
+
+          ## Готовые файлы
+
+          - [Telegram-CIDR.txt](Telegram-CIDR.txt) — IPv4/CIDR-сети Telegram.
+          - [Telegram_RouterOS.rsc](Telegram_RouterOS.rsc) — готовый address-list для RouterOS.
+          - [Telegram_DNS](Telegram_DNS) — актуальный список DNS-имён Telegram.
+
+          ## DNS maintenance
+
+          Обслуживание `Telegram_DNS` выполняется централизованно через [DKHNV/DNS-Maintenance](https://github.com/DKHNV/DNS-Maintenance).
+
+          Автоматика:
+
+          - ищет новые DNS-имена Telegram по открытым источникам;
+          - проверяет DNS через несколько независимых резолверов;
+          - допускает в DNS lifecycle только hostname с публичным unicast IPv4;
+          - ведёт состояния `pending`, `suspect`, `quarantine` и `expired`;
+          - отдельно наблюдает HTTPS/TLS, не используя его как основание для удаления DNS.
+
+          ## Структура автоматизации
+
+          - `dns-maintenance-v1.json` — конфигурация Telegram для центрального движка;
+          - `dns/telegram/` — lifecycle state, discovery state, HTTPS/TLS state и отчёт;
+          - `.github/workflows/dns-maintenance.yml` — единственный production workflow DNS-Maintenance.
+
+          Локального исполняемого DNS-движка в этом репозитории больше нет: код обслуживания находится только в центральном `DNS-Maintenance`.
+
+          При этом `Telegram-CIDR.txt` и `Telegram_RouterOS.rsc` являются самостоятельными файлами проекта и не относятся к внутреннему DNS-движку.
+          EOF
+          sed -i 's/^          //' README.md
+
+      - name: Remove one-shot restore workflow
+        shell: bash
+        run: |
+          rm -f .github/workflows/telegram-restore-project-files.yml
+
+      - name: Verify result
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          test -s Telegram-CIDR.txt
+          test -s Telegram_RouterOS.rsc
+          test -s Telegram_DNS
+
+          test ! -e dns_maintenance
+          test ! -e .github/workflows/dns-maintenance-v1-pilot.yml
+          test ! -e .github/workflows/dns-maintenance-v1-migration.yml
+
+          echo "CIDR lines: $(grep -cve '^[[:space:]]*$' Telegram-CIDR.txt)"
+          echo "RouterOS address entries: $(grep -c '^add list=telegram ' Telegram_RouterOS.rsc)"
+          git status --short
+          git diff --stat
+
+      - name: Commit restoration
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+          git commit -m "fix: restore Telegram CIDR and RouterOS files"
+          git push
