@@ -1,12 +1,13 @@
 # Telegram
 
-Репозиторий содержит готовые сетевые списки Telegram и автоматизированно поддерживаемый список DNS-имён.
+Репозиторий содержит материалы, связанные с сетевой обработкой трафика сервиса Telegram.
+Здесь собраны данные и файлы, которые могут использоваться при построении правил маршрутизации, фильтрации, сегментации и сетевой политики.
 
 ## Готовые файлы
 
-- [Telegram-CIDR.txt](Telegram-CIDR.txt) — IPv4/CIDR-сети Telegram.
-- [Telegram_RouterOS.rsc](Telegram_RouterOS.rsc) — готовый address-list для RouterOS.
-- [Telegram_DNS](Telegram_DNS) — актуальный список DNS-имён Telegram.
+- [Telegram_RouterOS.rsc](Telegram_RouterOS.rsc) — файл с командами для роутеров MikroTik, позволяющий обновлять `address list` сервиса
+- [Telegram_CIDR.txt](Telegram_CIDR.txt) — список IP-адресов и CIDR-диапазонов сервиса
+- [Telegram_DNS](Telegram_DNS) — список доменных имён сервиса
 
 ## DNS maintenance
 
