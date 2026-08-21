@@ -22,11 +22,11 @@ concurrency:
 
 jobs:
   maintain:
-    uses: DKHNV/DNS-Maintenance/.github/workflows/reusable-maintenance.yml@c8696805dbdafe8e368b394dc5f21097455352c5
+    uses: DKHNV/DNS-Maintenance/.github/workflows/reusable-maintenance.yml@d2b7dffa3e79269e6f63ffb243ebf2abbfeae3eb
     with:
       config_path: dns-maintenance-v1.json
       collection: telegram
       dry_run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
-      engine_ref: c8696805dbdafe8e368b394dc5f21097455352c5
+      engine_ref: d2b7dffa3e79269e6f63ffb243ebf2abbfeae3eb
     secrets:
       certspotter_api_key: ${{ secrets.CERTSPOTTER_API_KEY }}
