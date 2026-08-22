@@ -1,5 +1,3 @@
-#Created by DKHNV
-#Gen5 21.08.2026
 /ip firewall address-list
 
 add list=telegram address=18.184.99.0/24 comment=telegram
