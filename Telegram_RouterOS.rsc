@@ -10,8 +10,4 @@ add list=telegram address=91.108.20.0/22 comment=telegram
 add list=telegram address=91.108.56.0/22 comment=telegram
 add list=telegram address=95.161.64.0/24 comment=telegram
 add list=telegram address=149.154.160.0/20 comment=telegram
-add list=telegram address=149.154.162.0/24 comment=telegram
-add list=telegram address=149.154.164.0/24 comment=telegram
-add list=telegram address=149.154.166.0/24 comment=telegram
-add list=telegram address=149.154.167.0/24 comment=telegram
 add list=telegram address=185.76.151.0/24 comment=telegram
