@@ -1,3 +1,0 @@
-mail.telegram.org
-mx101.telegram.org
-mx110.telegram.org
