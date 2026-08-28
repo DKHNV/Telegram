@@ -2,22 +2,22 @@
   "sources": {
     "certspotter": {
       "t.me": {
-        "after": 12386744104,
+        "after": 16839943877,
         "caught_up": true,
-        "last_poll": "2026-08-27T23:48:36Z"
+        "last_poll": "2026-08-28T14:23:47Z"
       },
       "telegram.me": {
         "after": 11937796110,
         "caught_up": true,
-        "last_poll": "2026-08-27T23:48:36Z"
+        "last_poll": "2026-08-28T14:23:47Z"
       },
       "telegram.org": {
         "after": 16770540421,
         "caught_up": true,
-        "last_poll": "2026-08-27T23:48:36Z"
+        "last_poll": "2026-08-28T14:23:47Z"
       }
     }
   },
-  "updated_at": "2026-08-27T23:48:36Z",
+  "updated_at": "2026-08-28T14:23:47Z",
   "version": 2
 }
