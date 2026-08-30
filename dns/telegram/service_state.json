@@ -352,19 +352,27 @@
           "result": "ALIVE",
           "tls_version": "TLSv1.3",
           "type": "HTTPS_OK"
+        },
+        {
+          "at": "2026-08-30T22:48:23Z",
+          "http_status": 302,
+          "ip": "149.154.166.110",
+          "result": "ALIVE",
+          "tls_version": "TLSv1.3",
+          "type": "HTTPS_OK"
         }
       ],
       "history_failures": 0,
-      "history_samples": 42,
-      "history_successes": 42,
+      "history_samples": 43,
+      "history_successes": 43,
       "hostname": "api.telegram.org",
-      "last_check": "2026-08-30T18:04:52Z",
+      "last_check": "2026-08-30T22:48:23Z",
       "last_failure": null,
       "last_ipv4": [
         "149.154.166.110"
       ],
       "last_result": "ALIVE",
-      "last_success": "2026-08-30T18:04:52Z",
+      "last_success": "2026-08-30T22:48:23Z",
       "stability_score": 100.0,
       "status": "alive"
     },
@@ -720,19 +728,27 @@
           "result": "ALIVE",
           "tls_version": "TLSv1.3",
           "type": "HTTPS_OK"
+        },
+        {
+          "at": "2026-08-30T22:48:23Z",
+          "http_status": 404,
+          "ip": "149.154.166.100",
+          "result": "ALIVE",
+          "tls_version": "TLSv1.3",
+          "type": "HTTPS_OK"
         }
       ],
       "history_failures": 0,
-      "history_samples": 42,
-      "history_successes": 42,
+      "history_samples": 43,
+      "history_successes": 43,
       "hostname": "cloud.telegram.org",
-      "last_check": "2026-08-30T18:04:52Z",
+      "last_check": "2026-08-30T22:48:23Z",
       "last_failure": null,
       "last_ipv4": [
         "149.154.166.100"
       ],
       "last_result": "ALIVE",
-      "last_success": "2026-08-30T18:04:52Z",
+      "last_success": "2026-08-30T22:48:23Z",
       "stability_score": 100.0,
       "status": "alive"
     },
@@ -1088,19 +1104,27 @@
           "result": "ALIVE",
           "tls_version": "TLSv1.3",
           "type": "HTTPS_OK"
+        },
+        {
+          "at": "2026-08-30T22:48:23Z",
+          "http_status": 200,
+          "ip": "149.154.167.99",
+          "result": "ALIVE",
+          "tls_version": "TLSv1.3",
+          "type": "HTTPS_OK"
         }
       ],
       "history_failures": 0,
-      "history_samples": 42,
-      "history_successes": 42,
+      "history_samples": 43,
+      "history_successes": 43,
       "hostname": "desktop.telegram.org",
-      "last_check": "2026-08-30T18:04:52Z",
+      "last_check": "2026-08-30T22:48:23Z",
       "last_failure": null,
       "last_ipv4": [
         "149.154.167.99"
       ],
       "last_result": "ALIVE",
-      "last_success": "2026-08-30T18:04:52Z",
+      "last_success": "2026-08-30T22:48:23Z",
       "stability_score": 100.0,
       "status": "alive"
     },
@@ -1456,19 +1480,27 @@
           "result": "ALIVE",
           "tls_version": "TLSv1.2",
           "type": "HTTPS_OK"
+        },
+        {
+          "at": "2026-08-30T22:48:23Z",
+          "http_status": 404,
+          "ip": "18.184.99.30",
+          "result": "ALIVE",
+          "tls_version": "TLSv1.2",
+          "type": "HTTPS_OK"
         }
       ],
       "history_failures": 0,
-      "history_samples": 42,
-      "history_successes": 42,
+      "history_samples": 43,
+      "history_successes": 43,
       "hostname": "gbot.integrations.telegram.org",
-      "last_check": "2026-08-30T18:04:52Z",
+      "last_check": "2026-08-30T22:48:23Z",
       "last_failure": null,
       "last_ipv4": [
         "18.184.99.30"
       ],
       "last_result": "ALIVE",
-      "last_success": "2026-08-30T18:04:52Z",
+      "last_success": "2026-08-30T22:48:23Z",
       "stability_score": 100.0,
       "status": "alive"
     },
@@ -1824,19 +1856,27 @@
           "result": "ALIVE",
           "tls_version": "TLSv1.3",
           "type": "HTTPS_OK"
+        },
+        {
+          "at": "2026-08-30T22:48:23Z",
+          "http_status": 200,
+          "ip": "149.154.167.99",
+          "result": "ALIVE",
+          "tls_version": "TLSv1.3",
+          "type": "HTTPS_OK"
         }
       ],
       "history_failures": 0,
-      "history_samples": 42,
-      "history_successes": 42,
+      "history_samples": 43,
+      "history_successes": 43,
       "hostname": "macos.telegram.org",
-      "last_check": "2026-08-30T18:04:52Z",
+      "last_check": "2026-08-30T22:48:23Z",
       "last_failure": null,
       "last_ipv4": [
         "149.154.167.99"
       ],
       "last_result": "ALIVE",
-      "last_success": "2026-08-30T18:04:52Z",
+      "last_success": "2026-08-30T22:48:23Z",
       "stability_score": 100.0,
       "status": "alive"
     },
@@ -2192,19 +2232,27 @@
           "result": "ALIVE",
           "tls_version": "TLSv1.3",
           "type": "HTTPS_OK"
+        },
+        {
+          "at": "2026-08-30T22:48:23Z",
+          "http_status": 403,
+          "ip": "149.154.164.3",
+          "result": "ALIVE",
+          "tls_version": "TLSv1.3",
+          "type": "HTTPS_OK"
         }
       ],
       "history_failures": 0,
-      "history_samples": 42,
-      "history_successes": 42,
+      "history_samples": 43,
+      "history_successes": 43,
       "hostname": "macupdates.telegram.org",
-      "last_check": "2026-08-30T18:04:52Z",
+      "last_check": "2026-08-30T22:48:23Z",
       "last_failure": null,
       "last_ipv4": [
         "149.154.164.3"
       ],
       "last_result": "ALIVE",
-      "last_success": "2026-08-30T18:04:52Z",
+      "last_success": "2026-08-30T22:48:23Z",
       "stability_score": 100.0,
       "status": "alive"
     },
@@ -2217,9 +2265,9 @@
           "status": "TIMEOUT"
         }
       ],
-      "consecutive_failures": 40,
+      "consecutive_failures": 41,
       "ever_alive": false,
-      "failure_observations": 40,
+      "failure_observations": 41,
       "failure_since": "2026-08-20T09:36:06Z",
       "first_seen": "2026-08-20T07:41:44Z",
       "history": [
@@ -2558,15 +2606,23 @@
             "TIMEOUT"
           ],
           "type": "TIMEOUT"
+        },
+        {
+          "at": "2026-08-30T22:48:23Z",
+          "result": "FAILURE",
+          "statuses": [
+            "TIMEOUT"
+          ],
+          "type": "TIMEOUT"
         }
       ],
-      "history_failures": 42,
-      "history_samples": 42,
+      "history_failures": 43,
+      "history_samples": 43,
       "history_successes": 0,
       "hostname": "mail.telegram.org",
-      "last_check": "2026-08-30T18:04:52Z",
+      "last_check": "2026-08-30T22:48:23Z",
       "last_failure": {
-        "at": "2026-08-30T18:04:52Z",
+        "at": "2026-08-30T22:48:23Z",
         "attempts": [
           {
             "detail": "timed out",
@@ -2597,9 +2653,9 @@
           "status": "TIMEOUT"
         }
       ],
-      "consecutive_failures": 40,
+      "consecutive_failures": 41,
       "ever_alive": false,
-      "failure_observations": 40,
+      "failure_observations": 41,
       "failure_since": "2026-08-20T09:36:06Z",
       "first_seen": "2026-08-20T07:41:44Z",
       "history": [
@@ -2938,15 +2994,23 @@
             "TIMEOUT"
           ],
           "type": "TIMEOUT"
+        },
+        {
+          "at": "2026-08-30T22:48:23Z",
+          "result": "FAILURE",
+          "statuses": [
+            "TIMEOUT"
+          ],
+          "type": "TIMEOUT"
         }
       ],
-      "history_failures": 42,
-      "history_samples": 42,
+      "history_failures": 43,
+      "history_samples": 43,
       "history_successes": 0,
       "hostname": "mx101.telegram.org",
-      "last_check": "2026-08-30T18:04:52Z",
+      "last_check": "2026-08-30T22:48:23Z",
       "last_failure": {
-        "at": "2026-08-30T18:04:52Z",
+        "at": "2026-08-30T22:48:23Z",
         "attempts": [
           {
             "detail": "timed out",
@@ -2977,9 +3041,9 @@
           "status": "TLS_CERT_ERROR"
         }
       ],
-      "consecutive_failures": 40,
+      "consecutive_failures": 41,
       "ever_alive": false,
-      "failure_observations": 40,
+      "failure_observations": 41,
       "failure_since": "2026-08-20T09:36:06Z",
       "first_seen": "2026-08-20T07:41:44Z",
       "history": [
@@ -3318,15 +3382,23 @@
             "TLS_CERT_ERROR"
           ],
           "type": "TLS_CERT_ERROR"
+        },
+        {
+          "at": "2026-08-30T22:48:23Z",
+          "result": "FAILURE",
+          "statuses": [
+            "TLS_CERT_ERROR"
+          ],
+          "type": "TLS_CERT_ERROR"
         }
       ],
-      "history_failures": 42,
-      "history_samples": 42,
+      "history_failures": 43,
+      "history_samples": 43,
       "history_successes": 0,
       "hostname": "mx110.telegram.org",
-      "last_check": "2026-08-30T18:04:52Z",
+      "last_check": "2026-08-30T22:48:23Z",
       "last_failure": {
-        "at": "2026-08-30T18:04:52Z",
+        "at": "2026-08-30T22:48:23Z",
         "attempts": [
           {
             "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1032)",
@@ -3700,19 +3772,27 @@
           "result": "ALIVE",
           "tls_version": "TLSv1.3",
           "type": "HTTPS_OK"
+        },
+        {
+          "at": "2026-08-30T22:48:23Z",
+          "http_status": 302,
+          "ip": "149.154.167.99",
+          "result": "ALIVE",
+          "tls_version": "TLSv1.3",
+          "type": "HTTPS_OK"
         }
       ],
       "history_failures": 0,
-      "history_samples": 42,
-      "history_successes": 42,
+      "history_samples": 43,
+      "history_successes": 43,
       "hostname": "my.telegram.org",
-      "last_check": "2026-08-30T18:04:52Z",
+      "last_check": "2026-08-30T22:48:23Z",
       "last_failure": null,
       "last_ipv4": [
         "149.154.167.99"
       ],
       "last_result": "ALIVE",
-      "last_success": "2026-08-30T18:04:52Z",
+      "last_success": "2026-08-30T22:48:23Z",
       "stability_score": 100.0,
       "status": "alive"
     },
@@ -4068,19 +4148,27 @@
           "result": "ALIVE",
           "tls_version": "TLSv1.3",
           "type": "HTTPS_OK"
+        },
+        {
+          "at": "2026-08-30T22:48:23Z",
+          "http_status": 403,
+          "ip": "149.154.167.220",
+          "result": "ALIVE",
+          "tls_version": "TLSv1.3",
+          "type": "HTTPS_OK"
         }
       ],
       "history_failures": 0,
-      "history_samples": 42,
-      "history_successes": 42,
+      "history_samples": 43,
+      "history_successes": 43,
       "hostname": "osx.telegram.org",
-      "last_check": "2026-08-30T18:04:52Z",
+      "last_check": "2026-08-30T22:48:23Z",
       "last_failure": null,
       "last_ipv4": [
         "149.154.167.220"
       ],
       "last_result": "ALIVE",
-      "last_success": "2026-08-30T18:04:52Z",
+      "last_success": "2026-08-30T22:48:23Z",
       "stability_score": 100.0,
       "status": "alive"
     },
@@ -4435,19 +4523,27 @@
           "result": "ALIVE",
           "tls_version": "TLSv1.3",
           "type": "HTTPS_OK"
+        },
+        {
+          "at": "2026-08-30T22:48:23Z",
+          "http_status": 302,
+          "ip": "149.154.167.99",
+          "result": "ALIVE",
+          "tls_version": "TLSv1.3",
+          "type": "HTTPS_OK"
         }
       ],
       "history_failures": 0,
-      "history_samples": 42,
-      "history_successes": 42,
+      "history_samples": 43,
+      "history_successes": 43,
       "hostname": "t.me",
-      "last_check": "2026-08-30T18:04:52Z",
+      "last_check": "2026-08-30T22:48:23Z",
       "last_failure": null,
       "last_ipv4": [
         "149.154.167.99"
       ],
       "last_result": "ALIVE",
-      "last_success": "2026-08-30T18:04:52Z",
+      "last_success": "2026-08-30T22:48:23Z",
       "stability_score": 100.0,
       "status": "alive"
     },
@@ -4801,19 +4897,27 @@
           "result": "ALIVE",
           "tls_version": "TLSv1.3",
           "type": "HTTPS_OK"
+        },
+        {
+          "at": "2026-08-30T22:48:23Z",
+          "http_status": 302,
+          "ip": "149.154.167.99",
+          "result": "ALIVE",
+          "tls_version": "TLSv1.3",
+          "type": "HTTPS_OK"
         }
       ],
       "history_failures": 0,
-      "history_samples": 42,
-      "history_successes": 42,
+      "history_samples": 43,
+      "history_successes": 43,
       "hostname": "telegram.me",
-      "last_check": "2026-08-30T18:04:52Z",
+      "last_check": "2026-08-30T22:48:23Z",
       "last_failure": null,
       "last_ipv4": [
         "149.154.167.99"
       ],
       "last_result": "ALIVE",
-      "last_success": "2026-08-30T18:04:52Z",
+      "last_success": "2026-08-30T22:48:23Z",
       "stability_score": 100.0,
       "status": "alive"
     },
@@ -5168,19 +5272,27 @@
           "result": "ALIVE",
           "tls_version": "TLSv1.3",
           "type": "HTTPS_OK"
+        },
+        {
+          "at": "2026-08-30T22:48:23Z",
+          "http_status": 200,
+          "ip": "149.154.167.99",
+          "result": "ALIVE",
+          "tls_version": "TLSv1.3",
+          "type": "HTTPS_OK"
         }
       ],
       "history_failures": 0,
-      "history_samples": 42,
-      "history_successes": 42,
+      "history_samples": 43,
+      "history_successes": 43,
       "hostname": "telegram.org",
-      "last_check": "2026-08-30T18:04:52Z",
+      "last_check": "2026-08-30T22:48:23Z",
       "last_failure": null,
       "last_ipv4": [
         "149.154.167.99"
       ],
       "last_result": "ALIVE",
-      "last_success": "2026-08-30T18:04:52Z",
+      "last_success": "2026-08-30T22:48:23Z",
       "stability_score": 100.0,
       "status": "alive"
     },
@@ -5536,19 +5648,27 @@
           "result": "ALIVE",
           "tls_version": "TLSv1.3",
           "type": "HTTPS_OK"
+        },
+        {
+          "at": "2026-08-30T22:48:23Z",
+          "http_status": 200,
+          "ip": "149.154.167.99",
+          "result": "ALIVE",
+          "tls_version": "TLSv1.3",
+          "type": "HTTPS_OK"
         }
       ],
       "history_failures": 0,
-      "history_samples": 42,
-      "history_successes": 42,
+      "history_samples": 43,
+      "history_successes": 43,
       "hostname": "web.telegram.org",
-      "last_check": "2026-08-30T18:04:52Z",
+      "last_check": "2026-08-30T22:48:23Z",
       "last_failure": null,
       "last_ipv4": [
         "149.154.167.99"
       ],
       "last_result": "ALIVE",
-      "last_success": "2026-08-30T18:04:52Z",
+      "last_success": "2026-08-30T22:48:23Z",
       "stability_score": 100.0,
       "status": "alive"
     },
@@ -5903,19 +6023,27 @@
           "result": "ALIVE",
           "tls_version": "TLSv1.3",
           "type": "HTTPS_OK"
+        },
+        {
+          "at": "2026-08-30T22:48:23Z",
+          "http_status": 302,
+          "ip": "149.154.167.99",
+          "result": "ALIVE",
+          "tls_version": "TLSv1.3",
+          "type": "HTTPS_OK"
         }
       ],
       "history_failures": 0,
-      "history_samples": 42,
-      "history_successes": 42,
+      "history_samples": 43,
+      "history_successes": 43,
       "hostname": "www.t.me",
-      "last_check": "2026-08-30T18:04:52Z",
+      "last_check": "2026-08-30T22:48:23Z",
       "last_failure": null,
       "last_ipv4": [
         "149.154.167.99"
       ],
       "last_result": "ALIVE",
-      "last_success": "2026-08-30T18:04:52Z",
+      "last_success": "2026-08-30T22:48:23Z",
       "stability_score": 100.0,
       "status": "alive"
     },
@@ -6269,19 +6397,27 @@
           "result": "ALIVE",
           "tls_version": "TLSv1.3",
           "type": "HTTPS_OK"
+        },
+        {
+          "at": "2026-08-30T22:48:23Z",
+          "http_status": 302,
+          "ip": "149.154.167.99",
+          "result": "ALIVE",
+          "tls_version": "TLSv1.3",
+          "type": "HTTPS_OK"
         }
       ],
       "history_failures": 0,
-      "history_samples": 42,
-      "history_successes": 42,
+      "history_samples": 43,
+      "history_successes": 43,
       "hostname": "www.telegram.me",
-      "last_check": "2026-08-30T18:04:52Z",
+      "last_check": "2026-08-30T22:48:23Z",
       "last_failure": null,
       "last_ipv4": [
         "149.154.167.99"
       ],
       "last_result": "ALIVE",
-      "last_success": "2026-08-30T18:04:52Z",
+      "last_success": "2026-08-30T22:48:23Z",
       "stability_score": 100.0,
       "status": "alive"
     },
@@ -6636,23 +6772,31 @@
           "result": "ALIVE",
           "tls_version": "TLSv1.3",
           "type": "HTTPS_OK"
+        },
+        {
+          "at": "2026-08-30T22:48:23Z",
+          "http_status": 200,
+          "ip": "149.154.167.99",
+          "result": "ALIVE",
+          "tls_version": "TLSv1.3",
+          "type": "HTTPS_OK"
         }
       ],
       "history_failures": 0,
-      "history_samples": 42,
-      "history_successes": 42,
+      "history_samples": 43,
+      "history_successes": 43,
       "hostname": "www.telegram.org",
-      "last_check": "2026-08-30T18:04:52Z",
+      "last_check": "2026-08-30T22:48:23Z",
       "last_failure": null,
       "last_ipv4": [
         "149.154.167.99"
       ],
       "last_result": "ALIVE",
-      "last_success": "2026-08-30T18:04:52Z",
+      "last_success": "2026-08-30T22:48:23Z",
       "stability_score": 100.0,
       "status": "alive"
     }
   },
-  "updated_at": "2026-08-30T18:04:52Z",
+  "updated_at": "2026-08-30T22:48:23Z",
   "version": 3
 }
