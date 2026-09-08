@@ -4,20 +4,20 @@
       "t.me": {
         "after": 16839943877,
         "caught_up": true,
-        "last_poll": "2026-09-08T12:54:05Z"
+        "last_poll": "2026-09-08T17:56:56Z"
       },
       "telegram.me": {
         "after": 11937796110,
         "caught_up": true,
-        "last_poll": "2026-09-08T12:54:05Z"
+        "last_poll": "2026-09-08T17:56:56Z"
       },
       "telegram.org": {
         "after": 16889750927,
         "caught_up": true,
-        "last_poll": "2026-09-08T12:54:05Z"
+        "last_poll": "2026-09-08T17:56:56Z"
       }
     }
   },
-  "updated_at": "2026-09-08T12:54:05Z",
+  "updated_at": "2026-09-08T17:56:56Z",
   "version": 2
 }
