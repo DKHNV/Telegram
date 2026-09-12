@@ -9,6 +9,7 @@ osx.telegram.org
 t.me
 telegram.me
 telegram.org
+tonbridge.telegram.org
 web.telegram.org
 www.t.me
 www.telegram.me
