@@ -57,17 +57,6 @@
             "user_agent": "DKHNV-DNS-Maintenance/1.0"
           }
         ]
-      },
-      "runtime_candidate": {
-        "enabled": true,
-        "classification": {
-          "enabled": true,
-          "candidate_eligibility": {
-            "enabled": true,
-            "min_seen_days": 2,
-            "min_observation_count": 2
-          }
-        }
       }
     }
   ]
