@@ -1,19 +1,19 @@
 {
   "candidates": {
     "6a46f63ae2bb4edbc66ccfb13d7e0f326aceb260b2daf91572097a78cda7e801": {
-      "classified_at": "2026-09-24T18:26:53Z",
+      "classified_at": "2026-09-24T23:14:29Z",
       "decision": "observe_only",
       "evidence": {
         "active_cycles": 2,
         "current_presence": true,
-        "current_routing_status": "grace",
+        "current_routing_status": "expired",
         "exact_dns_present": true,
         "exact_dns_status": "active",
         "feed_present": true,
         "observation_count": 2,
         "policy_excluded": false,
         "policy_rule": null,
-        "presence_cycles": 6,
+        "presence_cycles": 60,
         "reactivation_count": 0,
         "seen_days": 1
       },
@@ -23,19 +23,19 @@
       "version": 1
     },
     "729731436977372fd679c9a3c29ad9a20fccdd4d55626826d78fa1a2086f685b": {
-      "classified_at": "2026-09-24T18:26:53Z",
+      "classified_at": "2026-09-24T23:14:29Z",
       "decision": "observe_only",
       "evidence": {
-        "active_cycles": 4,
+        "active_cycles": 5,
         "current_presence": true,
-        "current_routing_status": "grace",
+        "current_routing_status": "expired",
         "exact_dns_present": true,
         "exact_dns_status": "active",
         "feed_present": true,
         "observation_count": 2,
         "policy_excluded": false,
         "policy_rule": null,
-        "presence_cycles": 6,
+        "presence_cycles": 60,
         "reactivation_count": 0,
         "seen_days": 1
       },
@@ -45,19 +45,19 @@
       "version": 1
     },
     "916c939354e556ce225df179540c47cc089c7af0cfee2ba51837a5f898270bc3": {
-      "classified_at": "2026-09-24T18:26:53Z",
+      "classified_at": "2026-09-24T23:14:29Z",
       "decision": "observe_only",
       "evidence": {
-        "active_cycles": 5,
+        "active_cycles": 6,
         "current_presence": true,
-        "current_routing_status": "grace",
+        "current_routing_status": "expired",
         "exact_dns_present": true,
         "exact_dns_status": "active",
         "feed_present": true,
         "observation_count": 2,
         "policy_excluded": false,
         "policy_rule": null,
-        "presence_cycles": 6,
+        "presence_cycles": 60,
         "reactivation_count": 0,
         "seen_days": 1
       },
@@ -67,19 +67,19 @@
       "version": 1
     },
     "dffde342245ff88158d2083722c37d988f71b3a1eb05f4aacec83958ee90d35d": {
-      "classified_at": "2026-09-24T18:26:53Z",
+      "classified_at": "2026-09-24T23:14:29Z",
       "decision": "observe_only",
       "evidence": {
-        "active_cycles": 6,
+        "active_cycles": 8,
         "current_presence": true,
-        "current_routing_status": "active",
+        "current_routing_status": "expired",
         "exact_dns_present": true,
         "exact_dns_status": "active",
         "feed_present": true,
         "observation_count": 1,
         "policy_excluded": false,
         "policy_rule": null,
-        "presence_cycles": 6,
+        "presence_cycles": 60,
         "reactivation_count": 0,
         "seen_days": 1
       },
@@ -89,19 +89,19 @@
       "version": 1
     },
     "e9c528e7403631d28458bead11c82f85f2e4bf6dd6452d0c2befda03f93f8735": {
-      "classified_at": "2026-09-24T18:26:53Z",
+      "classified_at": "2026-09-24T23:14:29Z",
       "decision": "observe_only",
       "evidence": {
-        "active_cycles": 5,
+        "active_cycles": 8,
         "current_presence": true,
-        "current_routing_status": "active",
+        "current_routing_status": "expired",
         "exact_dns_present": true,
         "exact_dns_status": "active",
         "feed_present": true,
         "observation_count": 2,
         "policy_excluded": false,
         "policy_rule": null,
-        "presence_cycles": 6,
+        "presence_cycles": 60,
         "reactivation_count": 0,
         "seen_days": 1
       },
@@ -111,7 +111,7 @@
       "version": 1
     }
   },
-  "classified_at": "2026-09-24T18:26:53Z",
+  "classified_at": "2026-09-24T23:14:29Z",
   "counts": {
     "candidate": 0,
     "observe_only": 5,
@@ -120,8 +120,8 @@
   },
   "mode": "shadow",
   "service": "telegram",
-  "source_content_hash": "560fff263c7e807ff0eabecd3c20157790d2a5d3946892e3b18ae409763f2b31",
-  "source_generated_at": "2026-09-24T16:26:27Z",
-  "source_last_intake_at": "2026-09-24T18:26:53Z",
+  "source_content_hash": "075a432d53bfce4f3b81e13fd532ad13017029da63c9b6da2386e38d9f9d6ed5",
+  "source_generated_at": "2026-09-24T20:59:09Z",
+  "source_last_intake_at": "2026-09-24T23:14:29Z",
   "version": 1
 }
