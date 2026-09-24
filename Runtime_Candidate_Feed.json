@@ -4,14 +4,52 @@
       "active_cycles": 2,
       "candidate_id": "6a46f63ae2bb4edbc66ccfb13d7e0f326aceb260b2daf91572097a78cda7e801",
       "current_presence": true,
-      "current_routing_status": "grace",
+      "current_routing_status": "expired",
       "first_observed": "2026-09-24T16:06:14Z",
       "hostname": "api.telegram.org",
       "id_version": 1,
       "last_external_at": "2026-09-24T16:05:55Z",
       "last_observed": "2026-09-24T16:06:41Z",
       "observation_count": 2,
-      "presence_cycles": 6,
+      "presence_cycles": 60,
+      "reactivation_count": 0,
+      "seen_dates": [
+        "2026-09-24"
+      ],
+      "state": "observed",
+      "suffix": "telegram.org"
+    },
+    {
+      "active_cycles": 8,
+      "candidate_id": "dffde342245ff88158d2083722c37d988f71b3a1eb05f4aacec83958ee90d35d",
+      "current_presence": true,
+      "current_routing_status": "expired",
+      "first_observed": "2026-09-24T16:06:14Z",
+      "hostname": "desktop.telegram.org",
+      "id_version": 1,
+      "last_external_at": "2026-09-24T16:05:55Z",
+      "last_observed": "2026-09-24T16:06:14Z",
+      "observation_count": 1,
+      "presence_cycles": 60,
+      "reactivation_count": 0,
+      "seen_dates": [
+        "2026-09-24"
+      ],
+      "state": "observed",
+      "suffix": "telegram.org"
+    },
+    {
+      "active_cycles": 8,
+      "candidate_id": "e9c528e7403631d28458bead11c82f85f2e4bf6dd6452d0c2befda03f93f8735",
+      "current_presence": true,
+      "current_routing_status": "expired",
+      "first_observed": "2026-09-24T16:06:14Z",
+      "hostname": "web.telegram.org",
+      "id_version": 1,
+      "last_external_at": "2026-09-24T16:05:55Z",
+      "last_observed": "2026-09-24T16:06:41Z",
+      "observation_count": 2,
+      "presence_cycles": 60,
       "reactivation_count": 0,
       "seen_dates": [
         "2026-09-24"
@@ -21,54 +59,16 @@
     },
     {
       "active_cycles": 6,
-      "candidate_id": "dffde342245ff88158d2083722c37d988f71b3a1eb05f4aacec83958ee90d35d",
-      "current_presence": true,
-      "current_routing_status": "active",
-      "first_observed": "2026-09-24T16:06:14Z",
-      "hostname": "desktop.telegram.org",
-      "id_version": 1,
-      "last_external_at": "2026-09-24T16:05:55Z",
-      "last_observed": "2026-09-24T16:06:14Z",
-      "observation_count": 1,
-      "presence_cycles": 6,
-      "reactivation_count": 0,
-      "seen_dates": [
-        "2026-09-24"
-      ],
-      "state": "observed",
-      "suffix": "telegram.org"
-    },
-    {
-      "active_cycles": 5,
-      "candidate_id": "e9c528e7403631d28458bead11c82f85f2e4bf6dd6452d0c2befda03f93f8735",
-      "current_presence": true,
-      "current_routing_status": "active",
-      "first_observed": "2026-09-24T16:06:14Z",
-      "hostname": "web.telegram.org",
-      "id_version": 1,
-      "last_external_at": "2026-09-24T16:05:55Z",
-      "last_observed": "2026-09-24T16:06:41Z",
-      "observation_count": 2,
-      "presence_cycles": 6,
-      "reactivation_count": 0,
-      "seen_dates": [
-        "2026-09-24"
-      ],
-      "state": "observed",
-      "suffix": "telegram.org"
-    },
-    {
-      "active_cycles": 5,
       "candidate_id": "916c939354e556ce225df179540c47cc089c7af0cfee2ba51837a5f898270bc3",
       "current_presence": true,
-      "current_routing_status": "grace",
+      "current_routing_status": "expired",
       "first_observed": "2026-09-24T16:06:14Z",
       "hostname": "www.t.me",
       "id_version": 1,
       "last_external_at": "2026-09-24T16:05:57Z",
       "last_observed": "2026-09-24T16:06:41Z",
       "observation_count": 2,
-      "presence_cycles": 6,
+      "presence_cycles": 60,
       "reactivation_count": 0,
       "seen_dates": [
         "2026-09-24"
@@ -77,17 +77,17 @@
       "suffix": "t.me"
     },
     {
-      "active_cycles": 4,
+      "active_cycles": 5,
       "candidate_id": "729731436977372fd679c9a3c29ad9a20fccdd4d55626826d78fa1a2086f685b",
       "current_presence": true,
-      "current_routing_status": "grace",
+      "current_routing_status": "expired",
       "first_observed": "2026-09-24T16:06:14Z",
       "hostname": "www.telegram.me",
       "id_version": 1,
       "last_external_at": "2026-09-24T16:05:56Z",
       "last_observed": "2026-09-24T16:06:41Z",
       "observation_count": 2,
-      "presence_cycles": 6,
+      "presence_cycles": 60,
       "reactivation_count": 0,
       "seen_dates": [
         "2026-09-24"
@@ -96,8 +96,8 @@
       "suffix": "telegram.me"
     }
   ],
-  "content_hash": "560fff263c7e807ff0eabecd3c20157790d2a5d3946892e3b18ae409763f2b31",
-  "generated_at": "2026-09-24T16:26:27Z",
+  "content_hash": "075a432d53bfce4f3b81e13fd532ad13017029da63c9b6da2386e38d9f9d6ed5",
+  "generated_at": "2026-09-24T20:59:09Z",
   "hash_algorithm": "sha256",
   "history_scope": "since_analytics_start",
   "observer_id": "76e41c45-c36a-471f-9aa1-7db362959514",
