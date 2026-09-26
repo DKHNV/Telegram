@@ -11,7 +11,7 @@
       "last_external_at": "2026-09-24T16:05:55Z",
       "last_observed": "2026-09-24T16:06:41Z",
       "observation_count": 2,
-      "presence_cycles": 416,
+      "presence_cycles": 487,
       "reactivation_count": 0,
       "seen_dates": [
         "2026-09-24"
@@ -30,7 +30,7 @@
       "last_external_at": "2026-09-24T16:05:55Z",
       "last_observed": "2026-09-24T16:06:14Z",
       "observation_count": 1,
-      "presence_cycles": 416,
+      "presence_cycles": 487,
       "reactivation_count": 0,
       "seen_dates": [
         "2026-09-24"
@@ -49,7 +49,7 @@
       "last_external_at": "2026-09-24T16:05:55Z",
       "last_observed": "2026-09-24T16:06:41Z",
       "observation_count": 2,
-      "presence_cycles": 416,
+      "presence_cycles": 487,
       "reactivation_count": 0,
       "seen_dates": [
         "2026-09-24"
@@ -68,7 +68,7 @@
       "last_external_at": "2026-09-24T16:05:57Z",
       "last_observed": "2026-09-24T16:06:41Z",
       "observation_count": 2,
-      "presence_cycles": 416,
+      "presence_cycles": 487,
       "reactivation_count": 0,
       "seen_dates": [
         "2026-09-24"
@@ -87,7 +87,7 @@
       "last_external_at": "2026-09-24T16:05:56Z",
       "last_observed": "2026-09-24T16:06:41Z",
       "observation_count": 2,
-      "presence_cycles": 416,
+      "presence_cycles": 487,
       "reactivation_count": 0,
       "seen_dates": [
         "2026-09-24"
@@ -96,8 +96,8 @@
       "suffix": "telegram.me"
     }
   ],
-  "content_hash": "8edc082affb894b45a38f4a4975fb46cef4d51d4924a9637ac175c14ac95023d",
-  "generated_at": "2026-09-26T02:59:08Z",
+  "content_hash": "ac6fb4f575495bd051a93b58fd7e10695839854b6f3396513f9e28aa52a37f03",
+  "generated_at": "2026-09-26T08:57:22Z",
   "hash_algorithm": "sha256",
   "history_scope": "since_analytics_start",
   "observer_id": "76e41c45-c36a-471f-9aa1-7db362959514",
