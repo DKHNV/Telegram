@@ -1,8 +1,1 @@
-rtmp.t.me
-www.api.telegram.org
-www.cloud.telegram.org
-www.gbot.integrations.telegram.org
-www.macupdates.telegram.org
-www.mail.telegram.org
-www.osx.telegram.org
 www.tonbridge.telegram.org
