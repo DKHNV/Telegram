@@ -10,10 +10,10 @@
       "first_observed": "2026-09-24T16:06:14Z",
       "hostname": "api.telegram.org",
       "last_external_at": "2026-09-24T16:05:55Z",
-      "last_intake_at": "2026-09-25T23:19:42Z",
+      "last_intake_at": "2026-09-26T07:47:22Z",
       "last_observed": "2026-09-24T16:06:41Z",
       "observation_count": 2,
-      "presence_cycles": 344,
+      "presence_cycles": 416,
       "reactivation_count": 0,
       "seen_dates": [
         "2026-09-24"
@@ -31,10 +31,10 @@
       "first_observed": "2026-09-24T16:06:14Z",
       "hostname": "www.telegram.me",
       "last_external_at": "2026-09-24T16:05:56Z",
-      "last_intake_at": "2026-09-25T23:19:42Z",
+      "last_intake_at": "2026-09-26T07:47:22Z",
       "last_observed": "2026-09-24T16:06:41Z",
       "observation_count": 2,
-      "presence_cycles": 344,
+      "presence_cycles": 416,
       "reactivation_count": 0,
       "seen_dates": [
         "2026-09-24"
@@ -52,10 +52,10 @@
       "first_observed": "2026-09-24T16:06:14Z",
       "hostname": "www.t.me",
       "last_external_at": "2026-09-24T16:05:57Z",
-      "last_intake_at": "2026-09-25T23:19:42Z",
+      "last_intake_at": "2026-09-26T07:47:22Z",
       "last_observed": "2026-09-24T16:06:41Z",
       "observation_count": 2,
-      "presence_cycles": 344,
+      "presence_cycles": 416,
       "reactivation_count": 0,
       "seen_dates": [
         "2026-09-24"
@@ -73,10 +73,10 @@
       "first_observed": "2026-09-24T16:06:14Z",
       "hostname": "desktop.telegram.org",
       "last_external_at": "2026-09-24T16:05:55Z",
-      "last_intake_at": "2026-09-25T23:19:42Z",
+      "last_intake_at": "2026-09-26T07:47:22Z",
       "last_observed": "2026-09-24T16:06:14Z",
       "observation_count": 1,
-      "presence_cycles": 344,
+      "presence_cycles": 416,
       "reactivation_count": 0,
       "seen_dates": [
         "2026-09-24"
@@ -85,7 +85,7 @@
       "suffix": "telegram.org"
     },
     "e9c528e7403631d28458bead11c82f85f2e4bf6dd6452d0c2befda03f93f8735": {
-      "active_cycles": 8,
+      "active_cycles": 10,
       "candidate_id": "e9c528e7403631d28458bead11c82f85f2e4bf6dd6452d0c2befda03f93f8735",
       "current_presence": true,
       "current_routing_status": "expired",
@@ -94,10 +94,10 @@
       "first_observed": "2026-09-24T16:06:14Z",
       "hostname": "web.telegram.org",
       "last_external_at": "2026-09-24T16:05:55Z",
-      "last_intake_at": "2026-09-25T23:19:42Z",
+      "last_intake_at": "2026-09-26T07:47:22Z",
       "last_observed": "2026-09-24T16:06:41Z",
       "observation_count": 2,
-      "presence_cycles": 344,
+      "presence_cycles": 416,
       "reactivation_count": 0,
       "seen_dates": [
         "2026-09-24"
@@ -106,11 +106,11 @@
       "suffix": "telegram.org"
     }
   },
-  "last_intake_at": "2026-09-25T23:19:42Z",
+  "last_intake_at": "2026-09-26T07:47:22Z",
   "last_intake_status": "ok",
   "observer_id": "76e41c45-c36a-471f-9aa1-7db362959514",
   "schema_version": 1,
   "service": "telegram",
-  "source_content_hash": "ca4d80757715b7a7a6d144d9df0ea91d1b615d40cbbd83aaaed71dd1f099abbf",
-  "source_generated_at": "2026-09-25T20:55:59Z"
+  "source_content_hash": "8edc082affb894b45a38f4a4975fb46cef4d51d4924a9637ac175c14ac95023d",
+  "source_generated_at": "2026-09-26T02:59:08Z"
 }
