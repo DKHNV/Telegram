@@ -1,7 +1,7 @@
 {
   "candidates": {
     "6a46f63ae2bb4edbc66ccfb13d7e0f326aceb260b2daf91572097a78cda7e801": {
-      "classified_at": "2026-10-06T23:51:31Z",
+      "classified_at": "2026-10-07T08:45:38Z",
       "decision": "observe_only",
       "evidence": {
         "active_cycles": 3,
@@ -23,7 +23,7 @@
       "version": 1
     },
     "729731436977372fd679c9a3c29ad9a20fccdd4d55626826d78fa1a2086f685b": {
-      "classified_at": "2026-10-06T23:51:31Z",
+      "classified_at": "2026-10-07T08:45:38Z",
       "decision": "observe_only",
       "evidence": {
         "active_cycles": 5,
@@ -45,7 +45,7 @@
       "version": 1
     },
     "916c939354e556ce225df179540c47cc089c7af0cfee2ba51837a5f898270bc3": {
-      "classified_at": "2026-10-06T23:51:31Z",
+      "classified_at": "2026-10-07T08:45:38Z",
       "decision": "observe_only",
       "evidence": {
         "active_cycles": 7,
@@ -67,7 +67,7 @@
       "version": 1
     },
     "dffde342245ff88158d2083722c37d988f71b3a1eb05f4aacec83958ee90d35d": {
-      "classified_at": "2026-10-06T23:51:31Z",
+      "classified_at": "2026-10-07T08:45:38Z",
       "decision": "observe_only",
       "evidence": {
         "active_cycles": 11,
@@ -89,7 +89,7 @@
       "version": 1
     },
     "e9c528e7403631d28458bead11c82f85f2e4bf6dd6452d0c2befda03f93f8735": {
-      "classified_at": "2026-10-06T23:51:31Z",
+      "classified_at": "2026-10-07T08:45:38Z",
       "decision": "observe_only",
       "evidence": {
         "active_cycles": 10,
@@ -111,7 +111,7 @@
       "version": 1
     }
   },
-  "classified_at": "2026-10-06T23:51:31Z",
+  "classified_at": "2026-10-07T08:45:38Z",
   "counts": {
     "candidate": 0,
     "observe_only": 5,
@@ -122,6 +122,6 @@
   "service": "telegram",
   "source_content_hash": "ae46a808ffdab25eee3315aafe132c3b6b92e5af647c9a78eece331a5211d583",
   "source_generated_at": "2026-09-27T02:56:33Z",
-  "source_last_intake_at": "2026-10-06T23:51:31Z",
+  "source_last_intake_at": "2026-10-07T08:45:38Z",
   "version": 1
 }
