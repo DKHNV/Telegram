@@ -20,6 +20,25 @@
       "suffix": "telegram.org"
     },
     {
+      "active_cycles": 2,
+      "candidate_id": "106eb07060c73b757eb36c99144afc60e11d4c6a9e6a0d470087ebb527d690e8",
+      "current_presence": true,
+      "current_routing_status": "expired",
+      "first_observed": "2026-10-08T23:31:45Z",
+      "hostname": "core.telegram.org",
+      "id_version": 1,
+      "last_external_at": "2026-10-08T23:29:55Z",
+      "last_observed": "2026-10-08T23:31:45Z",
+      "observation_count": 1,
+      "presence_cycles": 42,
+      "reactivation_count": 0,
+      "seen_dates": [
+        "2026-10-08"
+      ],
+      "state": "observed",
+      "suffix": "telegram.org"
+    },
+    {
       "active_cycles": 11,
       "candidate_id": "dffde342245ff88158d2083722c37d988f71b3a1eb05f4aacec83958ee90d35d",
       "current_presence": false,
@@ -96,8 +115,8 @@
       "suffix": "telegram.me"
     }
   ],
-  "content_hash": "ae46a808ffdab25eee3315aafe132c3b6b92e5af647c9a78eece331a5211d583",
-  "generated_at": "2026-09-27T02:56:33Z",
+  "content_hash": "f7812a5e83b1ecd21376a73d51be23689aaa7de1006a6d5c7193c620ba7c3374",
+  "generated_at": "2026-10-09T02:57:27Z",
   "hash_algorithm": "sha256",
   "history_scope": "since_analytics_start",
   "observer_id": "76e41c45-c36a-471f-9aa1-7db362959514",
