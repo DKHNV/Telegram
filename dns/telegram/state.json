@@ -10,11 +10,11 @@
       "ipv4": [
         "149.154.166.110"
       ],
-      "last_check": "2026-10-08T19:58:58Z",
+      "last_check": "2026-10-09T00:25:45Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-10-08T19:58:58Z",
+      "last_success": "2026-10-09T00:25:45Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -47,6 +47,42 @@
       ],
       "status": "active"
     },
+    "cdn-telegram.org": {
+      "canonical_name": null,
+      "consecutive_negative_checks": 1,
+      "ever_validated": true,
+      "expired_at": null,
+      "first_seen": "2026-10-09T00:25:45Z",
+      "hostname": "cdn-telegram.org",
+      "ipv4": [],
+      "last_check": "2026-10-09T00:25:45Z",
+      "last_failure": "2026-10-09T00:25:45Z",
+      "last_negative": "2026-10-09T00:25:45Z",
+      "last_result": "NEGATIVE",
+      "last_success": null,
+      "negative_observations": 1,
+      "negative_since": "2026-10-09T00:25:45Z",
+      "quarantined_at": null,
+      "resolver_results": {
+        "1.1.1.1": {
+          "ipv4": [],
+          "status": "NO_A"
+        },
+        "8.8.8.8": {
+          "ipv4": [],
+          "status": "NO_A"
+        },
+        "9.9.9.9": {
+          "ipv4": [],
+          "status": "NO_A"
+        }
+      },
+      "safety_reason": null,
+      "sources": [
+        "legacy_active"
+      ],
+      "status": "active"
+    },
     "cloud.telegram.org": {
       "canonical_name": "cloud.telegram.org",
       "consecutive_negative_checks": 0,
@@ -57,11 +93,11 @@
       "ipv4": [
         "149.154.166.100"
       ],
-      "last_check": "2026-10-08T19:58:58Z",
+      "last_check": "2026-10-09T00:25:45Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-10-08T19:58:58Z",
+      "last_success": "2026-10-09T00:25:45Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -94,6 +130,98 @@
       ],
       "status": "active"
     },
+    "comments.app": {
+      "canonical_name": "comments.app",
+      "consecutive_negative_checks": 0,
+      "ever_validated": true,
+      "expired_at": null,
+      "first_seen": "2026-10-09T00:25:45Z",
+      "hostname": "comments.app",
+      "ipv4": [
+        "149.154.164.13"
+      ],
+      "last_check": "2026-10-09T00:25:45Z",
+      "last_negative": null,
+      "last_result": "OK",
+      "last_success": "2026-10-09T00:25:45Z",
+      "negative_observations": 0,
+      "negative_since": null,
+      "quarantined_at": null,
+      "resolver_results": {
+        "1.1.1.1": {
+          "canonical_name": "comments.app",
+          "ipv4": [
+            "149.154.164.13"
+          ],
+          "status": "OK"
+        },
+        "8.8.8.8": {
+          "canonical_name": "comments.app",
+          "ipv4": [
+            "149.154.164.13"
+          ],
+          "status": "OK"
+        },
+        "9.9.9.9": {
+          "canonical_name": "comments.app",
+          "ipv4": [
+            "149.154.164.13"
+          ],
+          "status": "OK"
+        }
+      },
+      "safety_reason": null,
+      "sources": [
+        "legacy_active"
+      ],
+      "status": "active"
+    },
+    "contest.com": {
+      "canonical_name": "contest.com",
+      "consecutive_negative_checks": 0,
+      "ever_validated": true,
+      "expired_at": null,
+      "first_seen": "2026-10-09T00:25:45Z",
+      "hostname": "contest.com",
+      "ipv4": [
+        "95.161.64.99"
+      ],
+      "last_check": "2026-10-09T00:25:45Z",
+      "last_negative": null,
+      "last_result": "OK",
+      "last_success": "2026-10-09T00:25:45Z",
+      "negative_observations": 0,
+      "negative_since": null,
+      "quarantined_at": null,
+      "resolver_results": {
+        "1.1.1.1": {
+          "canonical_name": "contest.com",
+          "ipv4": [
+            "95.161.64.99"
+          ],
+          "status": "OK"
+        },
+        "8.8.8.8": {
+          "canonical_name": "contest.com",
+          "ipv4": [
+            "95.161.64.99"
+          ],
+          "status": "OK"
+        },
+        "9.9.9.9": {
+          "canonical_name": "contest.com",
+          "ipv4": [
+            "95.161.64.99"
+          ],
+          "status": "OK"
+        }
+      },
+      "safety_reason": null,
+      "sources": [
+        "legacy_active"
+      ],
+      "status": "active"
+    },
     "desktop.telegram.org": {
       "canonical_name": "desktop.telegram.org",
       "consecutive_negative_checks": 0,
@@ -104,11 +232,11 @@
       "ipv4": [
         "149.154.167.99"
       ],
-      "last_check": "2026-10-08T19:58:58Z",
+      "last_check": "2026-10-09T00:25:45Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-10-08T19:58:58Z",
+      "last_success": "2026-10-09T00:25:45Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -141,6 +269,56 @@
       ],
       "status": "active"
     },
+    "fragment.com": {
+      "canonical_name": "fragment.com",
+      "consecutive_negative_checks": 0,
+      "ever_validated": true,
+      "expired_at": null,
+      "first_seen": "2026-10-09T00:25:45Z",
+      "hostname": "fragment.com",
+      "ipv4": [
+        "104.20.26.203",
+        "172.66.170.24"
+      ],
+      "last_check": "2026-10-09T00:25:45Z",
+      "last_negative": null,
+      "last_result": "OK",
+      "last_success": "2026-10-09T00:25:45Z",
+      "negative_observations": 0,
+      "negative_since": null,
+      "quarantined_at": null,
+      "resolver_results": {
+        "1.1.1.1": {
+          "canonical_name": "fragment.com",
+          "ipv4": [
+            "104.20.26.203",
+            "172.66.170.24"
+          ],
+          "status": "OK"
+        },
+        "8.8.8.8": {
+          "canonical_name": "fragment.com",
+          "ipv4": [
+            "104.20.26.203",
+            "172.66.170.24"
+          ],
+          "status": "OK"
+        },
+        "9.9.9.9": {
+          "canonical_name": "fragment.com",
+          "ipv4": [
+            "104.20.26.203",
+            "172.66.170.24"
+          ],
+          "status": "OK"
+        }
+      },
+      "safety_reason": null,
+      "sources": [
+        "legacy_active"
+      ],
+      "status": "active"
+    },
     "gbot.integrations.telegram.org": {
       "canonical_name": "gbot.integrations.telegram.org",
       "consecutive_negative_checks": 0,
@@ -151,11 +329,11 @@
       "ipv4": [
         "18.184.99.30"
       ],
-      "last_check": "2026-10-08T19:58:58Z",
+      "last_check": "2026-10-09T00:25:45Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-10-08T19:58:58Z",
+      "last_success": "2026-10-09T00:25:45Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -189,6 +367,52 @@
       ],
       "status": "active"
     },
+    "graph.org": {
+      "canonical_name": "graph.org",
+      "consecutive_negative_checks": 0,
+      "ever_validated": true,
+      "expired_at": null,
+      "first_seen": "2026-10-09T00:25:45Z",
+      "hostname": "graph.org",
+      "ipv4": [
+        "149.154.164.13"
+      ],
+      "last_check": "2026-10-09T00:25:45Z",
+      "last_negative": null,
+      "last_result": "OK",
+      "last_success": "2026-10-09T00:25:45Z",
+      "negative_observations": 0,
+      "negative_since": null,
+      "quarantined_at": null,
+      "resolver_results": {
+        "1.1.1.1": {
+          "canonical_name": "graph.org",
+          "ipv4": [
+            "149.154.164.13"
+          ],
+          "status": "OK"
+        },
+        "8.8.8.8": {
+          "canonical_name": "graph.org",
+          "ipv4": [
+            "149.154.164.13"
+          ],
+          "status": "OK"
+        },
+        "9.9.9.9": {
+          "canonical_name": "graph.org",
+          "ipv4": [
+            "149.154.164.13"
+          ],
+          "status": "OK"
+        }
+      },
+      "safety_reason": null,
+      "sources": [
+        "legacy_active"
+      ],
+      "status": "active"
+    },
     "macos.telegram.org": {
       "canonical_name": "macos.telegram.org",
       "consecutive_negative_checks": 0,
@@ -199,11 +423,11 @@
       "ipv4": [
         "149.154.167.99"
       ],
-      "last_check": "2026-10-08T19:58:58Z",
+      "last_check": "2026-10-09T00:25:45Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-10-08T19:58:58Z",
+      "last_success": "2026-10-09T00:25:45Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -246,11 +470,11 @@
       "ipv4": [
         "149.154.164.3"
       ],
-      "last_check": "2026-10-08T19:58:58Z",
+      "last_check": "2026-10-09T00:25:45Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-10-08T19:58:58Z",
+      "last_success": "2026-10-09T00:25:45Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -294,11 +518,11 @@
       "ipv4": [
         "95.161.64.16"
       ],
-      "last_check": "2026-10-08T19:58:58Z",
+      "last_check": "2026-10-09T00:25:45Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-10-08T19:58:58Z",
+      "last_success": "2026-10-09T00:25:45Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -342,11 +566,11 @@
       "ipv4": [
         "95.161.64.16"
       ],
-      "last_check": "2026-10-08T19:58:58Z",
+      "last_check": "2026-10-09T00:25:45Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-10-08T19:58:58Z",
+      "last_success": "2026-10-09T00:25:45Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -390,11 +614,11 @@
       "ipv4": [
         "149.154.162.247"
       ],
-      "last_check": "2026-10-08T19:58:58Z",
+      "last_check": "2026-10-09T00:25:45Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-10-08T19:58:58Z",
+      "last_success": "2026-10-09T00:25:45Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -438,11 +662,11 @@
       "ipv4": [
         "149.154.167.99"
       ],
-      "last_check": "2026-10-08T19:58:58Z",
+      "last_check": "2026-10-09T00:25:45Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-10-08T19:58:58Z",
+      "last_success": "2026-10-09T00:25:45Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -485,11 +709,11 @@
       "ipv4": [
         "149.154.167.220"
       ],
-      "last_check": "2026-10-08T19:58:58Z",
+      "last_check": "2026-10-09T00:25:45Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-10-08T19:58:58Z",
+      "last_success": "2026-10-09T00:25:45Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -519,6 +743,52 @@
       "safety_reason": null,
       "sources": [
         "discovered"
+      ],
+      "status": "active"
+    },
+    "quiz.directory": {
+      "canonical_name": "quiz.directory",
+      "consecutive_negative_checks": 0,
+      "ever_validated": true,
+      "expired_at": null,
+      "first_seen": "2026-10-09T00:25:45Z",
+      "hostname": "quiz.directory",
+      "ipv4": [
+        "149.154.164.13"
+      ],
+      "last_check": "2026-10-09T00:25:45Z",
+      "last_negative": null,
+      "last_result": "OK",
+      "last_success": "2026-10-09T00:25:45Z",
+      "negative_observations": 0,
+      "negative_since": null,
+      "quarantined_at": null,
+      "resolver_results": {
+        "1.1.1.1": {
+          "canonical_name": "quiz.directory",
+          "ipv4": [
+            "149.154.164.13"
+          ],
+          "status": "OK"
+        },
+        "8.8.8.8": {
+          "canonical_name": "quiz.directory",
+          "ipv4": [
+            "149.154.164.13"
+          ],
+          "status": "OK"
+        },
+        "9.9.9.9": {
+          "canonical_name": "quiz.directory",
+          "ipv4": [
+            "149.154.164.13"
+          ],
+          "status": "OK"
+        }
+      },
+      "safety_reason": null,
+      "sources": [
+        "legacy_active"
       ],
       "status": "active"
     },
@@ -569,11 +839,11 @@
       "ipv4": [
         "149.154.167.99"
       ],
-      "last_check": "2026-10-08T19:58:58Z",
+      "last_check": "2026-10-09T00:25:45Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-10-08T19:58:58Z",
+      "last_success": "2026-10-09T00:25:45Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -606,6 +876,226 @@
       ],
       "status": "active"
     },
+    "tdesktop.com": {
+      "canonical_name": "tdesktop.com",
+      "consecutive_negative_checks": 0,
+      "ever_validated": true,
+      "expired_at": null,
+      "first_seen": "2026-10-09T00:25:45Z",
+      "hostname": "tdesktop.com",
+      "ipv4": [
+        "188.166.3.205"
+      ],
+      "last_check": "2026-10-09T00:25:45Z",
+      "last_negative": null,
+      "last_result": "OK",
+      "last_success": "2026-10-09T00:25:45Z",
+      "negative_observations": 0,
+      "negative_since": null,
+      "quarantined_at": null,
+      "resolver_results": {
+        "1.1.1.1": {
+          "canonical_name": "tdesktop.com",
+          "ipv4": [
+            "188.166.3.205"
+          ],
+          "status": "OK"
+        },
+        "8.8.8.8": {
+          "canonical_name": "tdesktop.com",
+          "ipv4": [
+            "188.166.3.205"
+          ],
+          "status": "OK"
+        },
+        "9.9.9.9": {
+          "canonical_name": "tdesktop.com",
+          "ipv4": [
+            "188.166.3.205"
+          ],
+          "status": "OK"
+        }
+      },
+      "safety_reason": null,
+      "sources": [
+        "legacy_active"
+      ],
+      "status": "active"
+    },
+    "telega.one": {
+      "canonical_name": "telega.one",
+      "consecutive_negative_checks": 0,
+      "ever_validated": true,
+      "expired_at": null,
+      "first_seen": "2026-10-09T00:25:45Z",
+      "hostname": "telega.one",
+      "ipv4": [
+        "95.161.64.100"
+      ],
+      "last_check": "2026-10-09T00:25:45Z",
+      "last_negative": null,
+      "last_result": "OK",
+      "last_success": "2026-10-09T00:25:45Z",
+      "negative_observations": 0,
+      "negative_since": null,
+      "quarantined_at": null,
+      "resolver_results": {
+        "1.1.1.1": {
+          "canonical_name": "telega.one",
+          "ipv4": [
+            "95.161.64.100"
+          ],
+          "status": "OK"
+        },
+        "8.8.8.8": {
+          "canonical_name": "telega.one",
+          "ipv4": [
+            "95.161.64.100"
+          ],
+          "status": "OK"
+        },
+        "9.9.9.9": {
+          "canonical_name": "telega.one",
+          "ipv4": [
+            "95.161.64.100"
+          ],
+          "status": "OK"
+        }
+      },
+      "safety_reason": null,
+      "sources": [
+        "legacy_active"
+      ],
+      "status": "active"
+    },
+    "telegra.ph": {
+      "canonical_name": "telegra.ph",
+      "consecutive_negative_checks": 0,
+      "ever_validated": true,
+      "expired_at": null,
+      "first_seen": "2026-10-09T00:25:45Z",
+      "hostname": "telegra.ph",
+      "ipv4": [
+        "149.154.164.13"
+      ],
+      "last_check": "2026-10-09T00:25:45Z",
+      "last_negative": null,
+      "last_result": "OK",
+      "last_success": "2026-10-09T00:25:45Z",
+      "negative_observations": 0,
+      "negative_since": null,
+      "quarantined_at": null,
+      "resolver_results": {
+        "1.1.1.1": {
+          "canonical_name": "telegra.ph",
+          "ipv4": [
+            "149.154.164.13"
+          ],
+          "status": "OK"
+        },
+        "8.8.8.8": {
+          "canonical_name": "telegra.ph",
+          "ipv4": [
+            "149.154.164.13"
+          ],
+          "status": "OK"
+        },
+        "9.9.9.9": {
+          "canonical_name": "telegra.ph",
+          "ipv4": [
+            "149.154.164.13"
+          ],
+          "status": "OK"
+        }
+      },
+      "safety_reason": null,
+      "sources": [
+        "legacy_active"
+      ],
+      "status": "active"
+    },
+    "telegram-cdn.org": {
+      "canonical_name": null,
+      "consecutive_negative_checks": 1,
+      "ever_validated": true,
+      "expired_at": null,
+      "first_seen": "2026-10-09T00:25:45Z",
+      "hostname": "telegram-cdn.org",
+      "ipv4": [],
+      "last_check": "2026-10-09T00:25:45Z",
+      "last_failure": "2026-10-09T00:25:45Z",
+      "last_negative": "2026-10-09T00:25:45Z",
+      "last_result": "NEGATIVE",
+      "last_success": null,
+      "negative_observations": 1,
+      "negative_since": "2026-10-09T00:25:45Z",
+      "quarantined_at": null,
+      "resolver_results": {
+        "1.1.1.1": {
+          "ipv4": [],
+          "status": "NXDOMAIN"
+        },
+        "8.8.8.8": {
+          "ipv4": [],
+          "status": "NXDOMAIN"
+        },
+        "9.9.9.9": {
+          "ipv4": [],
+          "status": "NXDOMAIN"
+        }
+      },
+      "safety_reason": null,
+      "sources": [
+        "legacy_active"
+      ],
+      "status": "active"
+    },
+    "telegram.dog": {
+      "canonical_name": "telegram.dog",
+      "consecutive_negative_checks": 0,
+      "ever_validated": true,
+      "expired_at": null,
+      "first_seen": "2026-10-09T00:25:45Z",
+      "hostname": "telegram.dog",
+      "ipv4": [
+        "149.154.167.99"
+      ],
+      "last_check": "2026-10-09T00:25:45Z",
+      "last_negative": null,
+      "last_result": "OK",
+      "last_success": "2026-10-09T00:25:45Z",
+      "negative_observations": 0,
+      "negative_since": null,
+      "quarantined_at": null,
+      "resolver_results": {
+        "1.1.1.1": {
+          "canonical_name": "telegram.dog",
+          "ipv4": [
+            "149.154.167.99"
+          ],
+          "status": "OK"
+        },
+        "8.8.8.8": {
+          "canonical_name": "telegram.dog",
+          "ipv4": [
+            "149.154.167.99"
+          ],
+          "status": "OK"
+        },
+        "9.9.9.9": {
+          "canonical_name": "telegram.dog",
+          "ipv4": [
+            "149.154.167.99"
+          ],
+          "status": "OK"
+        }
+      },
+      "safety_reason": null,
+      "sources": [
+        "legacy_active"
+      ],
+      "status": "active"
+    },
     "telegram.me": {
       "canonical_name": "telegram.me",
       "consecutive_negative_checks": 0,
@@ -616,11 +1106,11 @@
       "ipv4": [
         "149.154.167.99"
       ],
-      "last_check": "2026-10-08T19:58:58Z",
+      "last_check": "2026-10-09T00:25:45Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-10-08T19:58:58Z",
+      "last_success": "2026-10-09T00:25:45Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -664,11 +1154,11 @@
       "ipv4": [
         "149.154.167.99"
       ],
-      "last_check": "2026-10-08T19:58:58Z",
+      "last_check": "2026-10-09T00:25:45Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-10-08T19:58:58Z",
+      "last_success": "2026-10-09T00:25:45Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -702,6 +1192,198 @@
       ],
       "status": "active"
     },
+    "telegram.space": {
+      "canonical_name": "telegram.space",
+      "consecutive_negative_checks": 0,
+      "ever_validated": true,
+      "expired_at": null,
+      "first_seen": "2026-10-09T00:25:45Z",
+      "hostname": "telegram.space",
+      "ipv4": [
+        "149.154.167.99"
+      ],
+      "last_check": "2026-10-09T00:25:45Z",
+      "last_negative": null,
+      "last_result": "OK",
+      "last_success": "2026-10-09T00:25:45Z",
+      "negative_observations": 0,
+      "negative_since": null,
+      "quarantined_at": null,
+      "resolver_results": {
+        "1.1.1.1": {
+          "canonical_name": "telegram.space",
+          "ipv4": [
+            "149.154.167.99"
+          ],
+          "status": "OK"
+        },
+        "8.8.8.8": {
+          "canonical_name": "telegram.space",
+          "ipv4": [
+            "149.154.167.99"
+          ],
+          "status": "OK"
+        },
+        "9.9.9.9": {
+          "canonical_name": "telegram.space",
+          "ipv4": [
+            "149.154.167.99"
+          ],
+          "status": "OK"
+        }
+      },
+      "safety_reason": null,
+      "sources": [
+        "legacy_active"
+      ],
+      "status": "active"
+    },
+    "telesco.pe": {
+      "canonical_name": "telesco.pe",
+      "consecutive_negative_checks": 0,
+      "ever_validated": true,
+      "expired_at": null,
+      "first_seen": "2026-10-09T00:25:45Z",
+      "hostname": "telesco.pe",
+      "ipv4": [
+        "149.154.167.99"
+      ],
+      "last_check": "2026-10-09T00:25:45Z",
+      "last_negative": null,
+      "last_result": "OK",
+      "last_success": "2026-10-09T00:25:45Z",
+      "negative_observations": 0,
+      "negative_since": null,
+      "quarantined_at": null,
+      "resolver_results": {
+        "1.1.1.1": {
+          "canonical_name": "telesco.pe",
+          "ipv4": [
+            "149.154.167.99"
+          ],
+          "status": "OK"
+        },
+        "8.8.8.8": {
+          "canonical_name": "telesco.pe",
+          "ipv4": [
+            "149.154.167.99"
+          ],
+          "status": "OK"
+        },
+        "9.9.9.9": {
+          "canonical_name": "telesco.pe",
+          "ipv4": [
+            "149.154.167.99"
+          ],
+          "status": "OK"
+        }
+      },
+      "safety_reason": null,
+      "sources": [
+        "legacy_active"
+      ],
+      "status": "active"
+    },
+    "tg.dev": {
+      "canonical_name": "tg.dev",
+      "consecutive_negative_checks": 0,
+      "ever_validated": true,
+      "expired_at": null,
+      "first_seen": "2026-10-09T00:25:45Z",
+      "hostname": "tg.dev",
+      "ipv4": [
+        "149.154.167.99"
+      ],
+      "last_check": "2026-10-09T00:25:45Z",
+      "last_negative": null,
+      "last_result": "OK",
+      "last_success": "2026-10-09T00:25:45Z",
+      "negative_observations": 0,
+      "negative_since": null,
+      "quarantined_at": null,
+      "resolver_results": {
+        "1.1.1.1": {
+          "canonical_name": "tg.dev",
+          "ipv4": [
+            "149.154.167.99"
+          ],
+          "status": "OK"
+        },
+        "8.8.8.8": {
+          "canonical_name": "tg.dev",
+          "ipv4": [
+            "149.154.167.99"
+          ],
+          "status": "OK"
+        },
+        "9.9.9.9": {
+          "canonical_name": "tg.dev",
+          "ipv4": [
+            "149.154.167.99"
+          ],
+          "status": "OK"
+        }
+      },
+      "safety_reason": null,
+      "sources": [
+        "legacy_active"
+      ],
+      "status": "active"
+    },
+    "ton.org": {
+      "canonical_name": "ton.org",
+      "consecutive_negative_checks": 0,
+      "ever_validated": true,
+      "expired_at": null,
+      "first_seen": "2026-10-09T00:25:45Z",
+      "hostname": "ton.org",
+      "ipv4": [
+        "104.26.14.213",
+        "104.26.15.213",
+        "172.67.71.168"
+      ],
+      "last_check": "2026-10-09T00:25:45Z",
+      "last_negative": null,
+      "last_result": "OK",
+      "last_success": "2026-10-09T00:25:45Z",
+      "negative_observations": 0,
+      "negative_since": null,
+      "quarantined_at": null,
+      "resolver_results": {
+        "1.1.1.1": {
+          "canonical_name": "ton.org",
+          "ipv4": [
+            "104.26.14.213",
+            "104.26.15.213",
+            "172.67.71.168"
+          ],
+          "status": "OK"
+        },
+        "8.8.8.8": {
+          "canonical_name": "ton.org",
+          "ipv4": [
+            "104.26.14.213",
+            "104.26.15.213",
+            "172.67.71.168"
+          ],
+          "status": "OK"
+        },
+        "9.9.9.9": {
+          "canonical_name": "ton.org",
+          "ipv4": [
+            "104.26.14.213",
+            "104.26.15.213",
+            "172.67.71.168"
+          ],
+          "status": "OK"
+        }
+      },
+      "safety_reason": null,
+      "sources": [
+        "legacy_active"
+      ],
+      "status": "active"
+    },
     "tonbridge.telegram.org": {
       "canonical_name": "tonbridge.telegram.org",
       "consecutive_negative_checks": 0,
@@ -712,10 +1394,10 @@
       "ipv4": [
         "149.154.161.151"
       ],
-      "last_check": "2026-10-08T19:58:58Z",
+      "last_check": "2026-10-09T00:25:45Z",
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-10-08T19:58:58Z",
+      "last_success": "2026-10-09T00:25:45Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -748,6 +1430,88 @@
       ],
       "status": "active"
     },
+    "tx.me": {
+      "canonical_name": "tx.me",
+      "consecutive_negative_checks": 0,
+      "ever_validated": true,
+      "expired_at": null,
+      "first_seen": "2026-10-09T00:25:45Z",
+      "hostname": "tx.me",
+      "ipv4": [
+        "95.161.64.99"
+      ],
+      "last_check": "2026-10-09T00:25:45Z",
+      "last_negative": null,
+      "last_result": "OK",
+      "last_success": "2026-10-09T00:25:45Z",
+      "negative_observations": 0,
+      "negative_since": null,
+      "quarantined_at": null,
+      "resolver_results": {
+        "1.1.1.1": {
+          "canonical_name": "tx.me",
+          "ipv4": [
+            "95.161.64.99"
+          ],
+          "status": "OK"
+        },
+        "8.8.8.8": {
+          "canonical_name": "tx.me",
+          "ipv4": [
+            "95.161.64.99"
+          ],
+          "status": "OK"
+        },
+        "9.9.9.9": {
+          "canonical_name": "tx.me",
+          "ipv4": [
+            "95.161.64.99"
+          ],
+          "status": "OK"
+        }
+      },
+      "safety_reason": null,
+      "sources": [
+        "legacy_active"
+      ],
+      "status": "active"
+    },
+    "usercontent.dev": {
+      "canonical_name": null,
+      "consecutive_negative_checks": 1,
+      "ever_validated": true,
+      "expired_at": null,
+      "first_seen": "2026-10-09T00:25:45Z",
+      "hostname": "usercontent.dev",
+      "ipv4": [],
+      "last_check": "2026-10-09T00:25:45Z",
+      "last_failure": "2026-10-09T00:25:45Z",
+      "last_negative": "2026-10-09T00:25:45Z",
+      "last_result": "NEGATIVE",
+      "last_success": null,
+      "negative_observations": 1,
+      "negative_since": "2026-10-09T00:25:45Z",
+      "quarantined_at": null,
+      "resolver_results": {
+        "1.1.1.1": {
+          "ipv4": [],
+          "status": "NO_A"
+        },
+        "8.8.8.8": {
+          "ipv4": [],
+          "status": "NO_A"
+        },
+        "9.9.9.9": {
+          "ipv4": [],
+          "status": "NO_A"
+        }
+      },
+      "safety_reason": null,
+      "sources": [
+        "legacy_active"
+      ],
+      "status": "active"
+    },
     "web.telegram.org": {
       "canonical_name": "web.telegram.org",
       "consecutive_negative_checks": 0,
@@ -758,11 +1522,11 @@
       "ipv4": [
         "149.154.167.99"
       ],
-      "last_check": "2026-10-08T19:58:58Z",
+      "last_check": "2026-10-09T00:25:45Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-10-08T19:58:58Z",
+      "last_success": "2026-10-09T00:25:45Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -944,18 +1708,18 @@
     },
     "www.mail.telegram.org": {
       "canonical_name": null,
-      "consecutive_negative_checks": 30,
+      "consecutive_negative_checks": 31,
       "ever_validated": false,
       "expired_at": null,
       "first_seen": "2026-08-20T07:24:52Z",
       "hostname": "www.mail.telegram.org",
       "ipv4": [],
-      "last_check": "2026-10-08T19:58:58Z",
-      "last_failure": "2026-10-08T19:58:58Z",
-      "last_negative": "2026-10-08T19:58:58Z",
+      "last_check": "2026-10-09T00:25:45Z",
+      "last_failure": "2026-10-09T00:25:45Z",
+      "last_negative": "2026-10-09T00:25:45Z",
       "last_result": "NEGATIVE",
       "last_success": null,
-      "negative_observations": 30,
+      "negative_observations": 31,
       "negative_since": "2026-09-28T20:35:21Z",
       "quarantined_at": "2026-10-05T21:30:29Z",
       "resolver_results": {
@@ -1025,11 +1789,11 @@
       "ipv4": [
         "149.154.167.99"
       ],
-      "last_check": "2026-10-08T19:58:58Z",
+      "last_check": "2026-10-09T00:25:45Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-10-08T19:58:58Z",
+      "last_success": "2026-10-09T00:25:45Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -1072,11 +1836,11 @@
       "ipv4": [
         "149.154.167.99"
       ],
-      "last_check": "2026-10-08T19:58:58Z",
+      "last_check": "2026-10-09T00:25:45Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-10-08T19:58:58Z",
+      "last_success": "2026-10-09T00:25:45Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -1119,11 +1883,11 @@
       "ipv4": [
         "149.154.167.99"
       ],
-      "last_check": "2026-10-08T19:58:58Z",
+      "last_check": "2026-10-09T00:25:45Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-10-08T19:58:58Z",
+      "last_success": "2026-10-09T00:25:45Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -1158,18 +1922,18 @@
     },
     "www.tonbridge.telegram.org": {
       "canonical_name": null,
-      "consecutive_negative_checks": 99,
+      "consecutive_negative_checks": 100,
       "ever_validated": false,
       "expired_at": null,
       "first_seen": "2026-09-11T17:46:17Z",
       "hostname": "www.tonbridge.telegram.org",
       "ipv4": [],
-      "last_check": "2026-10-08T19:58:58Z",
-      "last_failure": "2026-10-08T19:58:58Z",
-      "last_negative": "2026-10-08T19:58:58Z",
+      "last_check": "2026-10-09T00:25:45Z",
+      "last_failure": "2026-10-09T00:25:45Z",
+      "last_negative": "2026-10-09T00:25:45Z",
       "last_result": "NEGATIVE",
       "last_success": null,
-      "negative_observations": 99,
+      "negative_observations": 100,
       "negative_since": "2026-09-11T17:46:17Z",
       "quarantined_at": "2026-09-18T22:37:19Z",
       "resolver_results": {
@@ -1193,6 +1957,6 @@
       "status": "quarantine"
     }
   },
-  "updated_at": "2026-10-08T19:58:58Z",
+  "updated_at": "2026-10-09T00:25:45Z",
   "version": 2
 }
