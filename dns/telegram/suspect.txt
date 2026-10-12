@@ -1,0 +1,3 @@
+cdn-telegram.org
+telegram-cdn.org
+usercontent.dev
