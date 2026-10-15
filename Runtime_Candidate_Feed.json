@@ -1,7 +1,7 @@
 {
   "candidates": [
     {
-      "active_cycles": 6,
+      "active_cycles": 7,
       "candidate_id": "6a46f63ae2bb4edbc66ccfb13d7e0f326aceb260b2daf91572097a78cda7e801",
       "current_presence": true,
       "current_routing_status": "expired",
@@ -11,7 +11,7 @@
       "last_external_at": "2026-10-14T22:26:43Z",
       "last_observed": "2026-10-14T22:45:52Z",
       "observation_count": 4,
-      "presence_cycles": 710,
+      "presence_cycles": 780,
       "reactivation_count": 1,
       "seen_dates": [
         "2026-09-24",
@@ -50,7 +50,7 @@
       "last_external_at": "2026-10-14T22:26:44Z",
       "last_observed": "2026-10-14T22:45:52Z",
       "observation_count": 3,
-      "presence_cycles": 710,
+      "presence_cycles": 780,
       "reactivation_count": 1,
       "seen_dates": [
         "2026-09-24",
@@ -70,7 +70,7 @@
       "last_external_at": "2026-10-14T22:26:43Z",
       "last_observed": "2026-10-14T22:29:02Z",
       "observation_count": 3,
-      "presence_cycles": 710,
+      "presence_cycles": 780,
       "reactivation_count": 1,
       "seen_dates": [
         "2026-09-24",
@@ -90,7 +90,7 @@
       "last_external_at": "2026-10-14T22:26:45Z",
       "last_observed": "2026-10-14T22:45:52Z",
       "observation_count": 4,
-      "presence_cycles": 710,
+      "presence_cycles": 780,
       "reactivation_count": 1,
       "seen_dates": [
         "2026-09-24",
@@ -110,7 +110,7 @@
       "last_external_at": "2026-10-14T22:26:47Z",
       "last_observed": "2026-10-14T22:45:52Z",
       "observation_count": 4,
-      "presence_cycles": 710,
+      "presence_cycles": 780,
       "reactivation_count": 1,
       "seen_dates": [
         "2026-09-24",
@@ -120,8 +120,8 @@
       "suffix": "telegram.me"
     }
   ],
-  "content_hash": "05e9b95da26f94389f2b2eb3f650bc6dc206eed2e597e72b5264f5ddd3c901ae",
-  "generated_at": "2026-10-15T09:01:58Z",
+  "content_hash": "1dcf94873509b6f612ea9d1aa89cb0954fd544d0e8d3ef3d984ad6953fef1197",
+  "generated_at": "2026-10-15T14:55:16Z",
   "hash_algorithm": "sha256",
   "history_scope": "since_analytics_start",
   "observer_id": "76e41c45-c36a-471f-9aa1-7db362959514",
