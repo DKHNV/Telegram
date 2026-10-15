@@ -11,7 +11,7 @@
       "last_external_at": "2026-10-14T22:26:43Z",
       "last_observed": "2026-10-14T22:45:52Z",
       "observation_count": 4,
-      "presence_cycles": 638,
+      "presence_cycles": 710,
       "reactivation_count": 1,
       "seen_dates": [
         "2026-09-24",
@@ -40,7 +40,7 @@
       "suffix": "telegram.org"
     },
     {
-      "active_cycles": 15,
+      "active_cycles": 16,
       "candidate_id": "dffde342245ff88158d2083722c37d988f71b3a1eb05f4aacec83958ee90d35d",
       "current_presence": true,
       "current_routing_status": "expired",
@@ -50,7 +50,7 @@
       "last_external_at": "2026-10-14T22:26:44Z",
       "last_observed": "2026-10-14T22:45:52Z",
       "observation_count": 3,
-      "presence_cycles": 638,
+      "presence_cycles": 710,
       "reactivation_count": 1,
       "seen_dates": [
         "2026-09-24",
@@ -70,7 +70,7 @@
       "last_external_at": "2026-10-14T22:26:43Z",
       "last_observed": "2026-10-14T22:29:02Z",
       "observation_count": 3,
-      "presence_cycles": 638,
+      "presence_cycles": 710,
       "reactivation_count": 1,
       "seen_dates": [
         "2026-09-24",
@@ -90,7 +90,7 @@
       "last_external_at": "2026-10-14T22:26:45Z",
       "last_observed": "2026-10-14T22:45:52Z",
       "observation_count": 4,
-      "presence_cycles": 638,
+      "presence_cycles": 710,
       "reactivation_count": 1,
       "seen_dates": [
         "2026-09-24",
@@ -110,7 +110,7 @@
       "last_external_at": "2026-10-14T22:26:47Z",
       "last_observed": "2026-10-14T22:45:52Z",
       "observation_count": 4,
-      "presence_cycles": 638,
+      "presence_cycles": 710,
       "reactivation_count": 1,
       "seen_dates": [
         "2026-09-24",
@@ -120,8 +120,8 @@
       "suffix": "telegram.me"
     }
   ],
-  "content_hash": "f5457e51fec4ed95a60965f6af0ec953212a59415949c89154ad75efe0ec5885",
-  "generated_at": "2026-10-15T02:58:39Z",
+  "content_hash": "05e9b95da26f94389f2b2eb3f650bc6dc206eed2e597e72b5264f5ddd3c901ae",
+  "generated_at": "2026-10-15T09:01:58Z",
   "hash_algorithm": "sha256",
   "history_scope": "since_analytics_start",
   "observer_id": "76e41c45-c36a-471f-9aa1-7db362959514",
