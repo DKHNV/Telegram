@@ -4,7 +4,7 @@
       "active_cycles": 7,
       "candidate_id": "6a46f63ae2bb4edbc66ccfb13d7e0f326aceb260b2daf91572097a78cda7e801",
       "current_presence": false,
-      "current_routing_status": "expired",
+      "current_routing_status": "absent",
       "first_observed": "2026-09-24T16:06:14Z",
       "hostname": "api.telegram.org",
       "id_version": 1,
@@ -120,8 +120,8 @@
       "suffix": "telegram.me"
     }
   ],
-  "content_hash": "f00ee218dd355761e238ea4aad2251cbc7e28e1cb69cfce5a7235aacac461f75",
-  "generated_at": "2026-10-16T08:56:19Z",
+  "content_hash": "2b26801ff5506dbebe68cd239c5fba25fcb68b73e39de8289209889c711f7989",
+  "generated_at": "2026-10-16T14:59:43Z",
   "hash_algorithm": "sha256",
   "history_scope": "since_analytics_start",
   "observer_id": "76e41c45-c36a-471f-9aa1-7db362959514",
