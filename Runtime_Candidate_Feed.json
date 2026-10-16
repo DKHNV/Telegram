@@ -103,7 +103,7 @@
       "active_cycles": 9,
       "candidate_id": "729731436977372fd679c9a3c29ad9a20fccdd4d55626826d78fa1a2086f685b",
       "current_presence": false,
-      "current_routing_status": "expired",
+      "current_routing_status": "absent",
       "first_observed": "2026-09-24T16:06:14Z",
       "hostname": "www.telegram.me",
       "id_version": 1,
@@ -120,8 +120,8 @@
       "suffix": "telegram.me"
     }
   ],
-  "content_hash": "2b26801ff5506dbebe68cd239c5fba25fcb68b73e39de8289209889c711f7989",
-  "generated_at": "2026-10-16T14:59:43Z",
+  "content_hash": "da12ca901c3471b83af58375ca6d8853e587cfad7109411c4385b7128c62632b",
+  "generated_at": "2026-10-16T20:57:30Z",
   "hash_algorithm": "sha256",
   "history_scope": "since_analytics_start",
   "observer_id": "76e41c45-c36a-471f-9aa1-7db362959514",
