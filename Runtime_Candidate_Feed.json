@@ -83,7 +83,7 @@
       "active_cycles": 12,
       "candidate_id": "916c939354e556ce225df179540c47cc089c7af0cfee2ba51837a5f898270bc3",
       "current_presence": false,
-      "current_routing_status": "expired",
+      "current_routing_status": "absent",
       "first_observed": "2026-09-24T16:06:14Z",
       "hostname": "www.t.me",
       "id_version": 1,
@@ -120,8 +120,8 @@
       "suffix": "telegram.me"
     }
   ],
-  "content_hash": "bbd633a3df12c9bffd4d5d90e37e2bfcd55c7c3d299ca526672dd4f3cab02ff1",
-  "generated_at": "2026-10-15T20:58:43Z",
+  "content_hash": "2e82b44ec84604b84f2577f8c705404940934ee4aa7af1428d3eddc48fc565fb",
+  "generated_at": "2026-10-16T02:56:08Z",
   "hash_algorithm": "sha256",
   "history_scope": "since_analytics_start",
   "observer_id": "76e41c45-c36a-471f-9aa1-7db362959514",
