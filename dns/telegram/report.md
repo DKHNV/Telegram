@@ -1,6 +1,6 @@
 # Telegram DNS Maintenance Report
 
-Generated: `2026-11-06T20:55:49Z`
+Generated: `2026-11-07T00:57:23Z`
 
 ## DNS lifecycle
 
@@ -40,13 +40,13 @@ Average stability: **90.9%**
 
 | Hostname | State | Since | Observations | Last error | IPv4 | Stability | Samples |
 |---|---|---|---:|---|---|---:|---:|
-| `mail.telegram.org` | dead | `2026-08-20T09:36:06Z` | 279 | TIMEOUT | 95.161.64.16 | 0.0 | 41 |
-| `mx101.telegram.org` | dead | `2026-08-20T09:36:06Z` | 279 | TIMEOUT | 95.161.64.16 | 0.0 | 41 |
-| `mx110.telegram.org` | dead | `2026-08-20T09:36:06Z` | 279 | TLS_CERT_ERROR | 149.154.162.247 | 0.0 | 41 |
+| `mail.telegram.org` | dead | `2026-08-20T09:36:06Z` | 280 | TIMEOUT | 95.161.64.16 | 0.0 | 41 |
+| `mx101.telegram.org` | dead | `2026-08-20T09:36:06Z` | 280 | TIMEOUT | 95.161.64.16 | 0.0 | 41 |
+| `mx110.telegram.org` | dead | `2026-08-20T09:36:06Z` | 280 | TLS_CERT_ERROR | 149.154.162.247 | 0.0 | 41 |
 
 ## Discovery
 
-Discovery state updated: `2026-11-06T20:55:49Z`
+Discovery state updated: `2026-11-07T00:57:23Z`
 
 ## Notes
 
