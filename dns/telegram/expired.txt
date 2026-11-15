@@ -1,4 +1,7 @@
+cdn-telegram.org
 rtmp.t.me
+telegram-cdn.org
+usercontent.dev
 www.cloud.telegram.org
 www.gbot.integrations.telegram.org
 www.macupdates.telegram.org
