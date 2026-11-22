@@ -1,7 +1,7 @@
 /ip firewall address-list
 
+add list=telegram address=18.173.5.0/24 comment=telegram
 add list=telegram address=18.184.99.0/24 comment=telegram
-add list=telegram address=65.9.106.0/24 comment=telegram
 add list=telegram address=91.105.192.0/23 comment=telegram
 add list=telegram address=91.108.4.0/22 comment=telegram
 add list=telegram address=91.108.8.0/22 comment=telegram
@@ -12,8 +12,8 @@ add list=telegram address=91.108.56.0/22 comment=telegram
 add list=telegram address=95.161.64.0/24 comment=telegram
 add list=telegram address=104.20.26.0/24 comment=telegram
 add list=telegram address=104.26.14.0/23 comment=telegram
+add list=telegram address=143.198.248.0/24 comment=telegram
 add list=telegram address=149.154.160.0/20 comment=telegram
 add list=telegram address=172.66.170.0/24 comment=telegram
 add list=telegram address=172.67.71.0/24 comment=telegram
 add list=telegram address=185.76.151.0/24 comment=telegram
-add list=telegram address=188.166.3.0/24 comment=telegram
