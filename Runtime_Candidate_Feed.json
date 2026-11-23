@@ -31,7 +31,7 @@
       "last_external_at": "2026-11-22T15:19:15Z",
       "last_observed": "2026-11-22T19:04:00Z",
       "observation_count": 3,
-      "presence_cycles": 194,
+      "presence_cycles": 264,
       "reactivation_count": 1,
       "seen_dates": [
         "2026-10-08",
@@ -71,7 +71,7 @@
       "last_external_at": "2026-11-22T15:19:15Z",
       "last_observed": "2026-11-22T19:04:00Z",
       "observation_count": 5,
-      "presence_cycles": 932,
+      "presence_cycles": 1002,
       "reactivation_count": 2,
       "seen_dates": [
         "2026-09-24",
@@ -122,8 +122,8 @@
       "suffix": "telegram.me"
     }
   ],
-  "content_hash": "8629daff215b579c484175711b88be09adad4c0df09be4e51f1a01fc4e148510",
-  "generated_at": "2026-11-23T03:59:30Z",
+  "content_hash": "e5b3236d816400032a55819f9b1cf8f924ff63f458caab6c9dd17ad406f940e6",
+  "generated_at": "2026-11-23T09:59:13Z",
   "hash_algorithm": "sha256",
   "history_scope": "since_analytics_start",
   "observer_id": "76e41c45-c36a-471f-9aa1-7db362959514",
