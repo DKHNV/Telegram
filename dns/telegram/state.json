@@ -10,11 +10,11 @@
       "ipv4": [
         "149.154.166.110"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -94,11 +94,11 @@
       "ipv4": [
         "149.154.166.100"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -141,10 +141,10 @@
       "ipv4": [
         "149.154.164.13"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -187,10 +187,10 @@
       "ipv4": [
         "95.161.64.99"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -233,11 +233,11 @@
       "ipv4": [
         "149.154.167.99"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -281,10 +281,10 @@
         "104.20.26.203",
         "172.66.170.24"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -330,11 +330,11 @@
       "ipv4": [
         "18.184.99.30"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -378,10 +378,10 @@
       "ipv4": [
         "149.154.164.13"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -427,10 +427,10 @@
         "13.226.238.87",
         "13.226.238.99"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -482,11 +482,11 @@
       "ipv4": [
         "149.154.167.99"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -529,11 +529,11 @@
       "ipv4": [
         "149.154.164.3"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -577,11 +577,11 @@
       "ipv4": [
         "95.161.64.16"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -625,11 +625,11 @@
       "ipv4": [
         "95.161.64.16"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -673,11 +673,11 @@
       "ipv4": [
         "149.154.162.247"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -721,11 +721,11 @@
       "ipv4": [
         "149.154.167.99"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -768,11 +768,11 @@
       "ipv4": [
         "149.154.167.220"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -815,10 +815,10 @@
       "ipv4": [
         "149.154.164.13"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -898,11 +898,11 @@
       "ipv4": [
         "149.154.167.99"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -946,10 +946,10 @@
       "ipv4": [
         "143.198.248.7"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -992,10 +992,10 @@
       "ipv4": [
         "95.161.64.100"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -1038,10 +1038,10 @@
       "ipv4": [
         "149.154.164.13"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -1120,10 +1120,10 @@
       "ipv4": [
         "149.154.167.99"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -1166,11 +1166,11 @@
       "ipv4": [
         "149.154.167.99"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -1214,11 +1214,11 @@
       "ipv4": [
         "149.154.167.99"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -1262,10 +1262,10 @@
       "ipv4": [
         "149.154.167.99"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -1308,10 +1308,10 @@
       "ipv4": [
         "149.154.167.99"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -1354,10 +1354,10 @@
       "ipv4": [
         "149.154.167.99"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -1402,10 +1402,10 @@
         "104.26.15.213",
         "172.67.71.168"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -1454,10 +1454,10 @@
       "ipv4": [
         "149.154.161.151"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -1500,10 +1500,10 @@
       "ipv4": [
         "95.161.64.99"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -1582,11 +1582,11 @@
       "ipv4": [
         "149.154.167.99"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -1622,18 +1622,18 @@
     },
     "www.api.telegram.org": {
       "canonical_name": null,
-      "consecutive_negative_checks": 29,
+      "consecutive_negative_checks": 30,
       "ever_validated": false,
       "expired_at": null,
       "first_seen": "2026-08-20T07:24:52Z",
       "hostname": "www.api.telegram.org",
       "ipv4": [],
-      "last_check": "2026-11-24T23:55:45Z",
-      "last_failure": "2026-11-24T23:55:45Z",
-      "last_negative": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
+      "last_failure": "2026-11-25T13:03:28Z",
+      "last_negative": "2026-11-25T13:03:28Z",
       "last_result": "NEGATIVE",
       "last_success": null,
-      "negative_observations": 29,
+      "negative_observations": 30,
       "negative_since": "2026-11-12T21:51:10Z",
       "quarantined_at": "2026-11-19T22:40:48Z",
       "resolver_results": {
@@ -1850,11 +1850,11 @@
       "ipv4": [
         "149.154.167.99"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -1897,11 +1897,11 @@
       "ipv4": [
         "149.154.167.99"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -1944,11 +1944,11 @@
       "ipv4": [
         "149.154.167.99"
       ],
-      "last_check": "2026-11-24T23:55:45Z",
+      "last_check": "2026-11-25T13:03:28Z",
       "last_failure": null,
       "last_negative": null,
       "last_result": "OK",
-      "last_success": "2026-11-24T23:55:45Z",
+      "last_success": "2026-11-25T13:03:28Z",
       "negative_observations": 0,
       "negative_since": null,
       "quarantined_at": null,
@@ -2018,6 +2018,6 @@
       "status": "expired"
     }
   },
-  "updated_at": "2026-11-24T23:55:45Z",
+  "updated_at": "2026-11-25T13:03:28Z",
   "version": 2
 }
